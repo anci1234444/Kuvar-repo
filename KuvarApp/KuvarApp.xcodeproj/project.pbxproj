@@ -1,0 +1,615 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		453A3D9F2BD6851A00159D2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A3D9E2BD6851A00159D2F /* AppDelegate.swift */; };
+		453A3DA12BD6851A00159D2F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A3DA02BD6851A00159D2F /* SceneDelegate.swift */; };
+		453A3DA32BD6851A00159D2F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A3DA22BD6851A00159D2F /* ViewController.swift */; };
+		453A3DA82BD6851B00159D2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 453A3DA72BD6851B00159D2F /* Assets.xcassets */; };
+		453A3DAB2BD6851B00159D2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 453A3DA92BD6851B00159D2F /* LaunchScreen.storyboard */; };
+		453A3DB62BD6851B00159D2F /* KuvarAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A3DB52BD6851B00159D2F /* KuvarAppTests.swift */; };
+		453A3DC02BD6851B00159D2F /* KuvarAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A3DBF2BD6851B00159D2F /* KuvarAppUITests.swift */; };
+		453A3DC22BD6851B00159D2F /* KuvarAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A3DC12BD6851B00159D2F /* KuvarAppUITestsLaunchTests.swift */; };
+		453A3DD92BD69AD400159D2F /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 453A3DD82BD69AD400159D2F /* ViewController.xib */; };
+		453A3DDC2BD69EA400159D2F /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A3DD22BD68E9100159D2F /* BaseCoordinator.swift */; };
+		45C726BD2BD7985700B432D2 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C726BC2BD7985700B432D2 /* MainCoordinator.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		453A3DB22BD6851B00159D2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 453A3D932BD6851A00159D2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 453A3D9A2BD6851A00159D2F;
+			remoteInfo = KuvarApp;
+		};
+		453A3DBC2BD6851B00159D2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 453A3D932BD6851A00159D2F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 453A3D9A2BD6851A00159D2F;
+			remoteInfo = KuvarApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		453A3D9B2BD6851A00159D2F /* KuvarApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KuvarApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		453A3D9E2BD6851A00159D2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		453A3DA02BD6851A00159D2F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		453A3DA22BD6851A00159D2F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		453A3DA72BD6851B00159D2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		453A3DAA2BD6851B00159D2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		453A3DAC2BD6851B00159D2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		453A3DB12BD6851B00159D2F /* KuvarAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KuvarAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		453A3DB52BD6851B00159D2F /* KuvarAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KuvarAppTests.swift; sourceTree = "<group>"; };
+		453A3DBB2BD6851B00159D2F /* KuvarAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KuvarAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		453A3DBF2BD6851B00159D2F /* KuvarAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KuvarAppUITests.swift; sourceTree = "<group>"; };
+		453A3DC12BD6851B00159D2F /* KuvarAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KuvarAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		453A3DD22BD68E9100159D2F /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		453A3DD82BD69AD400159D2F /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		45C726BC2BD7985700B432D2 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		453A3D982BD6851A00159D2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		453A3DAE2BD6851B00159D2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		453A3DB82BD6851B00159D2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		453A3D922BD6851A00159D2F = {
+			isa = PBXGroup;
+			children = (
+				453A3D9D2BD6851A00159D2F /* KuvarApp */,
+				453A3DB42BD6851B00159D2F /* KuvarAppTests */,
+				453A3DBE2BD6851B00159D2F /* KuvarAppUITests */,
+				453A3D9C2BD6851A00159D2F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		453A3D9C2BD6851A00159D2F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				453A3D9B2BD6851A00159D2F /* KuvarApp.app */,
+				453A3DB12BD6851B00159D2F /* KuvarAppTests.xctest */,
+				453A3DBB2BD6851B00159D2F /* KuvarAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		453A3D9D2BD6851A00159D2F /* KuvarApp */ = {
+			isa = PBXGroup;
+			children = (
+				453A3DDB2BD69E8700159D2F /* Kordinatori */,
+				453A3DDA2BD69E1500159D2F /* KontroleriXibFajlovi */,
+				453A3D9E2BD6851A00159D2F /* AppDelegate.swift */,
+				453A3DA02BD6851A00159D2F /* SceneDelegate.swift */,
+				453A3DA72BD6851B00159D2F /* Assets.xcassets */,
+				453A3DA92BD6851B00159D2F /* LaunchScreen.storyboard */,
+				453A3DAC2BD6851B00159D2F /* Info.plist */,
+			);
+			path = KuvarApp;
+			sourceTree = "<group>";
+		};
+		453A3DB42BD6851B00159D2F /* KuvarAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				453A3DB52BD6851B00159D2F /* KuvarAppTests.swift */,
+			);
+			path = KuvarAppTests;
+			sourceTree = "<group>";
+		};
+		453A3DBE2BD6851B00159D2F /* KuvarAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				453A3DBF2BD6851B00159D2F /* KuvarAppUITests.swift */,
+				453A3DC12BD6851B00159D2F /* KuvarAppUITestsLaunchTests.swift */,
+			);
+			path = KuvarAppUITests;
+			sourceTree = "<group>";
+		};
+		453A3DDA2BD69E1500159D2F /* KontroleriXibFajlovi */ = {
+			isa = PBXGroup;
+			children = (
+				453A3DA22BD6851A00159D2F /* ViewController.swift */,
+				453A3DD82BD69AD400159D2F /* ViewController.xib */,
+			);
+			path = KontroleriXibFajlovi;
+			sourceTree = "<group>";
+		};
+		453A3DDB2BD69E8700159D2F /* Kordinatori */ = {
+			isa = PBXGroup;
+			children = (
+				453A3DD22BD68E9100159D2F /* BaseCoordinator.swift */,
+				45C726BC2BD7985700B432D2 /* MainCoordinator.swift */,
+			);
+			path = Kordinatori;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		453A3D9A2BD6851A00159D2F /* KuvarApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 453A3DC52BD6851B00159D2F /* Build configuration list for PBXNativeTarget "KuvarApp" */;
+			buildPhases = (
+				453A3D972BD6851A00159D2F /* Sources */,
+				453A3D982BD6851A00159D2F /* Frameworks */,
+				453A3D992BD6851A00159D2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KuvarApp;
+			productName = KuvarApp;
+			productReference = 453A3D9B2BD6851A00159D2F /* KuvarApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		453A3DB02BD6851B00159D2F /* KuvarAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 453A3DC82BD6851B00159D2F /* Build configuration list for PBXNativeTarget "KuvarAppTests" */;
+			buildPhases = (
+				453A3DAD2BD6851B00159D2F /* Sources */,
+				453A3DAE2BD6851B00159D2F /* Frameworks */,
+				453A3DAF2BD6851B00159D2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				453A3DB32BD6851B00159D2F /* PBXTargetDependency */,
+			);
+			name = KuvarAppTests;
+			productName = KuvarAppTests;
+			productReference = 453A3DB12BD6851B00159D2F /* KuvarAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		453A3DBA2BD6851B00159D2F /* KuvarAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 453A3DCB2BD6851B00159D2F /* Build configuration list for PBXNativeTarget "KuvarAppUITests" */;
+			buildPhases = (
+				453A3DB72BD6851B00159D2F /* Sources */,
+				453A3DB82BD6851B00159D2F /* Frameworks */,
+				453A3DB92BD6851B00159D2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				453A3DBD2BD6851B00159D2F /* PBXTargetDependency */,
+			);
+			name = KuvarAppUITests;
+			productName = KuvarAppUITests;
+			productReference = 453A3DBB2BD6851B00159D2F /* KuvarAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		453A3D932BD6851A00159D2F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					453A3D9A2BD6851A00159D2F = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					453A3DB02BD6851B00159D2F = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 453A3D9A2BD6851A00159D2F;
+					};
+					453A3DBA2BD6851B00159D2F = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 453A3D9A2BD6851A00159D2F;
+					};
+				};
+			};
+			buildConfigurationList = 453A3D962BD6851A00159D2F /* Build configuration list for PBXProject "KuvarApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 453A3D922BD6851A00159D2F;
+			productRefGroup = 453A3D9C2BD6851A00159D2F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				453A3D9A2BD6851A00159D2F /* KuvarApp */,
+				453A3DB02BD6851B00159D2F /* KuvarAppTests */,
+				453A3DBA2BD6851B00159D2F /* KuvarAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		453A3D992BD6851A00159D2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				453A3DAB2BD6851B00159D2F /* LaunchScreen.storyboard in Resources */,
+				453A3DD92BD69AD400159D2F /* ViewController.xib in Resources */,
+				453A3DA82BD6851B00159D2F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		453A3DAF2BD6851B00159D2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		453A3DB92BD6851B00159D2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		453A3D972BD6851A00159D2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				453A3DA32BD6851A00159D2F /* ViewController.swift in Sources */,
+				453A3D9F2BD6851A00159D2F /* AppDelegate.swift in Sources */,
+				453A3DA12BD6851A00159D2F /* SceneDelegate.swift in Sources */,
+				45C726BD2BD7985700B432D2 /* MainCoordinator.swift in Sources */,
+				453A3DDC2BD69EA400159D2F /* BaseCoordinator.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		453A3DAD2BD6851B00159D2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				453A3DB62BD6851B00159D2F /* KuvarAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		453A3DB72BD6851B00159D2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				453A3DC22BD6851B00159D2F /* KuvarAppUITestsLaunchTests.swift in Sources */,
+				453A3DC02BD6851B00159D2F /* KuvarAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		453A3DB32BD6851B00159D2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 453A3D9A2BD6851A00159D2F /* KuvarApp */;
+			targetProxy = 453A3DB22BD6851B00159D2F /* PBXContainerItemProxy */;
+		};
+		453A3DBD2BD6851B00159D2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 453A3D9A2BD6851A00159D2F /* KuvarApp */;
+			targetProxy = 453A3DBC2BD6851B00159D2F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		453A3DA92BD6851B00159D2F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				453A3DAA2BD6851B00159D2F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		453A3DC32BD6851B00159D2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		453A3DC42BD6851B00159D2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		453A3DC62BD6851B00159D2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KuvarApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = anaasceric.KuvarApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		453A3DC72BD6851B00159D2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KuvarApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = anaasceric.KuvarApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		453A3DC92BD6851B00159D2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = anaasceric.KuvarAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KuvarApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KuvarApp";
+			};
+			name = Debug;
+		};
+		453A3DCA2BD6851B00159D2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = anaasceric.KuvarAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KuvarApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/KuvarApp";
+			};
+			name = Release;
+		};
+		453A3DCC2BD6851B00159D2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = anaasceric.KuvarAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KuvarApp;
+			};
+			name = Debug;
+		};
+		453A3DCD2BD6851B00159D2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = anaasceric.KuvarAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KuvarApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		453A3D962BD6851A00159D2F /* Build configuration list for PBXProject "KuvarApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				453A3DC32BD6851B00159D2F /* Debug */,
+				453A3DC42BD6851B00159D2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		453A3DC52BD6851B00159D2F /* Build configuration list for PBXNativeTarget "KuvarApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				453A3DC62BD6851B00159D2F /* Debug */,
+				453A3DC72BD6851B00159D2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		453A3DC82BD6851B00159D2F /* Build configuration list for PBXNativeTarget "KuvarAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				453A3DC92BD6851B00159D2F /* Debug */,
+				453A3DCA2BD6851B00159D2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		453A3DCB2BD6851B00159D2F /* Build configuration list for PBXNativeTarget "KuvarAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				453A3DCC2BD6851B00159D2F /* Debug */,
+				453A3DCD2BD6851B00159D2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 453A3D932BD6851A00159D2F /* Project object */;
+}
