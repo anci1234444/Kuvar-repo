@@ -9,15 +9,17 @@
 /* Begin PBXBuildFile section */
 		453A3D9F2BD6851A00159D2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A3D9E2BD6851A00159D2F /* AppDelegate.swift */; };
 		453A3DA12BD6851A00159D2F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A3DA02BD6851A00159D2F /* SceneDelegate.swift */; };
-		453A3DA32BD6851A00159D2F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A3DA22BD6851A00159D2F /* ViewController.swift */; };
+		453A3DA32BD6851A00159D2F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A3DA22BD6851A00159D2F /* MainViewController.swift */; };
 		453A3DA82BD6851B00159D2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 453A3DA72BD6851B00159D2F /* Assets.xcassets */; };
 		453A3DAB2BD6851B00159D2F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 453A3DA92BD6851B00159D2F /* LaunchScreen.storyboard */; };
 		453A3DB62BD6851B00159D2F /* KuvarAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A3DB52BD6851B00159D2F /* KuvarAppTests.swift */; };
 		453A3DC02BD6851B00159D2F /* KuvarAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A3DBF2BD6851B00159D2F /* KuvarAppUITests.swift */; };
 		453A3DC22BD6851B00159D2F /* KuvarAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A3DC12BD6851B00159D2F /* KuvarAppUITestsLaunchTests.swift */; };
-		453A3DD92BD69AD400159D2F /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 453A3DD82BD69AD400159D2F /* ViewController.xib */; };
+		453A3DD92BD69AD400159D2F /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 453A3DD82BD69AD400159D2F /* MainViewController.xib */; };
 		453A3DDC2BD69EA400159D2F /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A3DD22BD68E9100159D2F /* BaseCoordinator.swift */; };
 		45C726BD2BD7985700B432D2 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C726BC2BD7985700B432D2 /* MainCoordinator.swift */; };
+		45C726BF2BD7EF0100B432D2 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C726BE2BD7EF0100B432D2 /* SplashScreenViewController.swift */; };
+		45C726C12BD7FE7C00B432D2 /* SplashScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45C726C02BD7FE7C00B432D2 /* SplashScreenViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +43,7 @@
 		453A3D9B2BD6851A00159D2F /* KuvarApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KuvarApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		453A3D9E2BD6851A00159D2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		453A3DA02BD6851A00159D2F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		453A3DA22BD6851A00159D2F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		453A3DA22BD6851A00159D2F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		453A3DA72BD6851B00159D2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		453A3DAA2BD6851B00159D2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		453A3DAC2BD6851B00159D2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,8 +53,10 @@
 		453A3DBF2BD6851B00159D2F /* KuvarAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KuvarAppUITests.swift; sourceTree = "<group>"; };
 		453A3DC12BD6851B00159D2F /* KuvarAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KuvarAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		453A3DD22BD68E9100159D2F /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
-		453A3DD82BD69AD400159D2F /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		453A3DD82BD69AD400159D2F /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		45C726BC2BD7985700B432D2 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		45C726BE2BD7EF0100B432D2 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
+		45C726C02BD7FE7C00B432D2 /* SplashScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashScreenViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +107,9 @@
 		453A3D9D2BD6851A00159D2F /* KuvarApp */ = {
 			isa = PBXGroup;
 			children = (
+				4557475C2BD9170D009607EE /* SplashView */,
 				453A3DDB2BD69E8700159D2F /* Kordinatori */,
-				453A3DDA2BD69E1500159D2F /* KontroleriXibFajlovi */,
+				453A3DDA2BD69E1500159D2F /* MainView */,
 				453A3D9E2BD6851A00159D2F /* AppDelegate.swift */,
 				453A3DA02BD6851A00159D2F /* SceneDelegate.swift */,
 				453A3DA72BD6851B00159D2F /* Assets.xcassets */,
@@ -131,13 +136,13 @@
 			path = KuvarAppUITests;
 			sourceTree = "<group>";
 		};
-		453A3DDA2BD69E1500159D2F /* KontroleriXibFajlovi */ = {
+		453A3DDA2BD69E1500159D2F /* MainView */ = {
 			isa = PBXGroup;
 			children = (
-				453A3DA22BD6851A00159D2F /* ViewController.swift */,
-				453A3DD82BD69AD400159D2F /* ViewController.xib */,
+				453A3DA22BD6851A00159D2F /* MainViewController.swift */,
+				453A3DD82BD69AD400159D2F /* MainViewController.xib */,
 			);
-			path = KontroleriXibFajlovi;
+			path = MainView;
 			sourceTree = "<group>";
 		};
 		453A3DDB2BD69E8700159D2F /* Kordinatori */ = {
@@ -147,6 +152,15 @@
 				45C726BC2BD7985700B432D2 /* MainCoordinator.swift */,
 			);
 			path = Kordinatori;
+			sourceTree = "<group>";
+		};
+		4557475C2BD9170D009607EE /* SplashView */ = {
+			isa = PBXGroup;
+			children = (
+				45C726BE2BD7EF0100B432D2 /* SplashScreenViewController.swift */,
+				45C726C02BD7FE7C00B432D2 /* SplashScreenViewController.xib */,
+			);
+			path = SplashView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,7 +268,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				453A3DAB2BD6851B00159D2F /* LaunchScreen.storyboard in Resources */,
-				453A3DD92BD69AD400159D2F /* ViewController.xib in Resources */,
+				45C726C12BD7FE7C00B432D2 /* SplashScreenViewController.xib in Resources */,
+				453A3DD92BD69AD400159D2F /* MainViewController.xib in Resources */,
 				453A3DA82BD6851B00159D2F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,8 +295,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				453A3DA32BD6851A00159D2F /* ViewController.swift in Sources */,
+				453A3DA32BD6851A00159D2F /* MainViewController.swift in Sources */,
 				453A3D9F2BD6851A00159D2F /* AppDelegate.swift in Sources */,
+				45C726BF2BD7EF0100B432D2 /* SplashScreenViewController.swift in Sources */,
 				453A3DA12BD6851A00159D2F /* SceneDelegate.swift in Sources */,
 				45C726BD2BD7985700B432D2 /* MainCoordinator.swift in Sources */,
 				453A3DDC2BD69EA400159D2F /* BaseCoordinator.swift in Sources */,
@@ -456,7 +472,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KuvarApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = SplashScreenViewController.xib;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -482,7 +498,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = KuvarApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = SplashScreenViewController.xib;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
