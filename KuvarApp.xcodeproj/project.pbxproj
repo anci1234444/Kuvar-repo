@@ -17,6 +17,8 @@
 		453A3DC22BD6851B00159D2F /* KuvarAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A3DC12BD6851B00159D2F /* KuvarAppUITestsLaunchTests.swift */; };
 		453A3DD92BD69AD400159D2F /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 453A3DD82BD69AD400159D2F /* MainViewController.xib */; };
 		453A3DDC2BD69EA400159D2F /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A3DD22BD68E9100159D2F /* BaseCoordinator.swift */; };
+		45C37DD42BDA9A22003A077B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 45C37DD32BDA9A22003A077B /* Alamofire */; };
+		45C37DD62BDA9A22003A077B /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 45C37DD52BDA9A22003A077B /* AlamofireDynamic */; };
 		45C726BD2BD7985700B432D2 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C726BC2BD7985700B432D2 /* MainCoordinator.swift */; };
 		45C726BF2BD7EF0100B432D2 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C726BE2BD7EF0100B432D2 /* SplashScreenViewController.swift */; };
 		45C726C12BD7FE7C00B432D2 /* SplashScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45C726C02BD7FE7C00B432D2 /* SplashScreenViewController.xib */; };
@@ -64,6 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45C37DD42BDA9A22003A077B /* Alamofire in Frameworks */,
+				45C37DD62BDA9A22003A077B /* AlamofireDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +183,10 @@
 			dependencies = (
 			);
 			name = KuvarApp;
+			packageProductDependencies = (
+				45C37DD32BDA9A22003A077B /* Alamofire */,
+				45C37DD52BDA9A22003A077B /* AlamofireDynamic */,
+			);
 			productName = KuvarApp;
 			productReference = 453A3D9B2BD6851A00159D2F /* KuvarApp.app */;
 			productType = "com.apple.product-type.application";
@@ -251,6 +259,9 @@
 				Base,
 			);
 			mainGroup = 453A3D922BD6851A00159D2F;
+			packageReferences = (
+				45C37DD22BDA9A22003A077B /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 453A3D9C2BD6851A00159D2F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -626,6 +637,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		45C37DD22BDA9A22003A077B /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		45C37DD32BDA9A22003A077B /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 45C37DD22BDA9A22003A077B /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		45C37DD52BDA9A22003A077B /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 45C37DD22BDA9A22003A077B /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 453A3D932BD6851A00159D2F /* Project object */;
 }
