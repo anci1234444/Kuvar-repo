@@ -9,6 +9,8 @@
 
 import UIKit
 
+
+
 class SplashScreenViewController: UIViewController {
     
     
@@ -22,17 +24,18 @@ class SplashScreenViewController: UIViewController {
     
     @IBOutlet weak var loadingImage: UIImageView!
     
-    var coordinator: MainCoordinator?
+    var didFinishSplashScreen: (() -> Void)?
+    
+  //  var coordinator: MainCoordinator?
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
         
-        // Simulate fetching data from server with a delay
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            // Navigate to the main screen after the delay
-            let mainViewController = MainViewController()
-            
+            print("Splash screen delay completed.")
+           // let mainViewController = MainViewController()
+                        self.didFinishSplashScreen?()
         }
         
         

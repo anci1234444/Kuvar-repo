@@ -108,7 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				4557475C2BD9170D009607EE /* SplashView */,
-				453A3DDB2BD69E8700159D2F /* Kordinatori */,
+				453A3DDB2BD69E8700159D2F /* Coordinators */,
 				453A3DDA2BD69E1500159D2F /* MainView */,
 				453A3D9E2BD6851A00159D2F /* AppDelegate.swift */,
 				453A3DA02BD6851A00159D2F /* SceneDelegate.swift */,
@@ -145,13 +145,13 @@
 			path = MainView;
 			sourceTree = "<group>";
 		};
-		453A3DDB2BD69E8700159D2F /* Kordinatori */ = {
+		453A3DDB2BD69E8700159D2F /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
 				453A3DD22BD68E9100159D2F /* BaseCoordinator.swift */,
 				45C726BC2BD7985700B432D2 /* MainCoordinator.swift */,
 			);
-			path = Kordinatori;
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 		4557475C2BD9170D009607EE /* SplashView */ = {

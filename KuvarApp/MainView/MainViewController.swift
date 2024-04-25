@@ -13,7 +13,7 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var testLabel: UILabel!
     
-    var coordinator: MainCoordinator?
+   // var coordinator: MainCoordinator?
     
    
     override func viewDidLoad() {
