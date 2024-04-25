@@ -20,7 +20,7 @@ class MainCoordinator: BaseCoordinator {
         let splashViewController = SplashScreenViewController(nibName: "SplashScreenViewController", bundle: nil)
         
         splashViewController.didFinishSplashScreen = { [weak self] in
-            self?.showMainScreen()
+        self?.showMainScreen()
         }
         
         window.rootViewController = splashViewController
@@ -29,8 +29,9 @@ class MainCoordinator: BaseCoordinator {
     
     func showMainScreen() {
         let mainViewController = MainViewController()
-    //  mainViewController.self = self
-                navigationController.setViewControllers([mainViewController], animated: false)
-                window.rootViewController = navigationController
+        navigationController.setViewControllers([mainViewController], animated: false)
+        window.rootViewController = navigationController
+        
+       
     }
 }
