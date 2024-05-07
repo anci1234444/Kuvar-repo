@@ -17,9 +17,19 @@
 		453A3DC22BD6851B00159D2F /* KuvarAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A3DC12BD6851B00159D2F /* KuvarAppUITestsLaunchTests.swift */; };
 		453A3DD92BD69AD400159D2F /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 453A3DD82BD69AD400159D2F /* MainViewController.xib */; };
 		453A3DDC2BD69EA400159D2F /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A3DD22BD68E9100159D2F /* BaseCoordinator.swift */; };
+		4585B9712BDF8FD1003B7F8C /* RecipesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4585B96F2BDF8FD1003B7F8C /* RecipesTableViewCell.swift */; };
+		4585B9722BDF8FD1003B7F8C /* RecipesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4585B9702BDF8FD1003B7F8C /* RecipesTableViewCell.xib */; };
+		45AF79B02BDBA7BC003DE1F9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 45AF79AF2BDBA7BC003DE1F9 /* Alamofire */; };
+		45AF79B22BDBB742003DE1F9 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AF79B12BDBB742003DE1F9 /* Recipe.swift */; };
+		45AF79B42BDBBBF0003DE1F9 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AF79B32BDBBBF0003DE1F9 /* RecipeViewController.swift */; };
+		45AF79B62BDBBDFA003DE1F9 /* RecipeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45AF79B52BDBBDFA003DE1F9 /* RecipeViewController.xib */; };
+		45C556802BDB8B7C0097C517 /* RecipeAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C5567F2BDB8B7C0097C517 /* RecipeAPIClient.swift */; };
 		45C726BD2BD7985700B432D2 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C726BC2BD7985700B432D2 /* MainCoordinator.swift */; };
 		45C726BF2BD7EF0100B432D2 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C726BE2BD7EF0100B432D2 /* SplashScreenViewController.swift */; };
 		45C726C12BD7FE7C00B432D2 /* SplashScreenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45C726C02BD7FE7C00B432D2 /* SplashScreenViewController.xib */; };
+		45C828B02BE0F7790041BA9D /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C828AF2BE0F7790041BA9D /* RecipeViewModel.swift */; };
+		45C828B72BE1156D0041BA9D /* MBProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 45C828B62BE1156D0041BA9D /* MBProgressHUD */; };
+		45C828B92BE121030041BA9D /* RecipeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C828B82BE121030041BA9D /* RecipeUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,9 +64,17 @@
 		453A3DC12BD6851B00159D2F /* KuvarAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KuvarAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		453A3DD22BD68E9100159D2F /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		453A3DD82BD69AD400159D2F /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		4585B96F2BDF8FD1003B7F8C /* RecipesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesTableViewCell.swift; sourceTree = "<group>"; };
+		4585B9702BDF8FD1003B7F8C /* RecipesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipesTableViewCell.xib; sourceTree = "<group>"; };
+		45AF79B12BDBB742003DE1F9 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		45AF79B32BDBBBF0003DE1F9 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
+		45AF79B52BDBBDFA003DE1F9 /* RecipeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeViewController.xib; sourceTree = "<group>"; };
+		45C5567F2BDB8B7C0097C517 /* RecipeAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeAPIClient.swift; sourceTree = "<group>"; };
 		45C726BC2BD7985700B432D2 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		45C726BE2BD7EF0100B432D2 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		45C726C02BD7FE7C00B432D2 /* SplashScreenViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashScreenViewController.xib; sourceTree = "<group>"; };
+		45C828AF2BE0F7790041BA9D /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
+		45C828B82BE121030041BA9D /* RecipeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +82,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45C828B72BE1156D0041BA9D /* MBProgressHUD in Frameworks */,
+				45AF79B02BDBA7BC003DE1F9 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +127,12 @@
 		453A3D9D2BD6851A00159D2F /* KuvarApp */ = {
 			isa = PBXGroup;
 			children = (
+				45C828BA2BE12A3F0041BA9D /* UseCase */,
+				45C828B42BE112F50041BA9D /* RecipeTableViewCell */,
+				45C828B32BE110B50041BA9D /* RecipeViewModel */,
+				45C828B22BE110760041BA9D /* RecipeModel */,
+				45C828B12BE1101D0041BA9D /* RecipeView */,
+				45C5567E2BDB8AE30097C517 /* API */,
 				4557475C2BD9170D009607EE /* SplashView */,
 				453A3DDB2BD69E8700159D2F /* Coordinators */,
 				453A3DDA2BD69E1500159D2F /* MainView */,
@@ -163,6 +189,56 @@
 			path = SplashView;
 			sourceTree = "<group>";
 		};
+		45C5567E2BDB8AE30097C517 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				45C5567F2BDB8B7C0097C517 /* RecipeAPIClient.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		45C828B12BE1101D0041BA9D /* RecipeView */ = {
+			isa = PBXGroup;
+			children = (
+				45AF79B32BDBBBF0003DE1F9 /* RecipeViewController.swift */,
+				45AF79B52BDBBDFA003DE1F9 /* RecipeViewController.xib */,
+			);
+			path = RecipeView;
+			sourceTree = "<group>";
+		};
+		45C828B22BE110760041BA9D /* RecipeModel */ = {
+			isa = PBXGroup;
+			children = (
+				45AF79B12BDBB742003DE1F9 /* Recipe.swift */,
+			);
+			path = RecipeModel;
+			sourceTree = "<group>";
+		};
+		45C828B32BE110B50041BA9D /* RecipeViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				45C828AF2BE0F7790041BA9D /* RecipeViewModel.swift */,
+			);
+			path = RecipeViewModel;
+			sourceTree = "<group>";
+		};
+		45C828B42BE112F50041BA9D /* RecipeTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				4585B96F2BDF8FD1003B7F8C /* RecipesTableViewCell.swift */,
+				4585B9702BDF8FD1003B7F8C /* RecipesTableViewCell.xib */,
+			);
+			path = RecipeTableViewCell;
+			sourceTree = "<group>";
+		};
+		45C828BA2BE12A3F0041BA9D /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				45C828B82BE121030041BA9D /* RecipeUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -179,6 +255,10 @@
 			dependencies = (
 			);
 			name = KuvarApp;
+			packageProductDependencies = (
+				45AF79AF2BDBA7BC003DE1F9 /* Alamofire */,
+				45C828B62BE1156D0041BA9D /* MBProgressHUD */,
+			);
 			productName = KuvarApp;
 			productReference = 453A3D9B2BD6851A00159D2F /* KuvarApp.app */;
 			productType = "com.apple.product-type.application";
@@ -251,6 +331,10 @@
 				Base,
 			);
 			mainGroup = 453A3D922BD6851A00159D2F;
+			packageReferences = (
+				45AF79AE2BDBA7BC003DE1F9 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				45C828B52BE1156D0041BA9D /* XCRemoteSwiftPackageReference "MBProgressHUD" */,
+			);
 			productRefGroup = 453A3D9C2BD6851A00159D2F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -269,6 +353,8 @@
 			files = (
 				453A3DAB2BD6851B00159D2F /* LaunchScreen.storyboard in Resources */,
 				45C726C12BD7FE7C00B432D2 /* SplashScreenViewController.xib in Resources */,
+				45AF79B62BDBBDFA003DE1F9 /* RecipeViewController.xib in Resources */,
+				4585B9722BDF8FD1003B7F8C /* RecipesTableViewCell.xib in Resources */,
 				453A3DD92BD69AD400159D2F /* MainViewController.xib in Resources */,
 				453A3DA82BD6851B00159D2F /* Assets.xcassets in Resources */,
 			);
@@ -297,10 +383,16 @@
 			files = (
 				453A3DA32BD6851A00159D2F /* MainViewController.swift in Sources */,
 				453A3D9F2BD6851A00159D2F /* AppDelegate.swift in Sources */,
+				45C556802BDB8B7C0097C517 /* RecipeAPIClient.swift in Sources */,
+				45C828B92BE121030041BA9D /* RecipeUseCase.swift in Sources */,
+				4585B9712BDF8FD1003B7F8C /* RecipesTableViewCell.swift in Sources */,
 				45C726BF2BD7EF0100B432D2 /* SplashScreenViewController.swift in Sources */,
 				453A3DA12BD6851A00159D2F /* SceneDelegate.swift in Sources */,
 				45C726BD2BD7985700B432D2 /* MainCoordinator.swift in Sources */,
+				45C828B02BE0F7790041BA9D /* RecipeViewModel.swift in Sources */,
 				453A3DDC2BD69EA400159D2F /* BaseCoordinator.swift in Sources */,
+				45AF79B22BDBB742003DE1F9 /* Recipe.swift in Sources */,
+				45AF79B42BDBBBF0003DE1F9 /* RecipeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,6 +718,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		45AF79AE2BDBA7BC003DE1F9 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		45C828B52BE1156D0041BA9D /* XCRemoteSwiftPackageReference "MBProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jdg/MBProgressHUD";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		45AF79AF2BDBA7BC003DE1F9 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 45AF79AE2BDBA7BC003DE1F9 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		45C828B62BE1156D0041BA9D /* MBProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 45C828B52BE1156D0041BA9D /* XCRemoteSwiftPackageReference "MBProgressHUD" */;
+			productName = MBProgressHUD;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 453A3D932BD6851A00159D2F /* Project object */;
 }

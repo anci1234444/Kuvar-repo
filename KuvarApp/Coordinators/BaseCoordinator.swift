@@ -13,11 +13,11 @@ protocol Coordinator: AnyObject {
 
 class BaseCoordinator: Coordinator {
     var navigationController: UINavigationController
-
+    
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
-
+    
     func start() {
         fatalError("start() method must be implemented")
     }

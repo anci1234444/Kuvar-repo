@@ -8,19 +8,47 @@
 import UIKit
 
 class MainViewController: UIViewController {
-
+    
+    var recipeViewController = RecipeViewController()
     
     
-    @IBOutlet weak var testLabel: UILabel!
-    
-   // var coordinator: MainCoordinator?
-    
-   
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        setupTabBarController()
     }
-
-
+    
+    
+    func setupTabBarController() {
+        
+        
+        let tabBarController = UITabBarController()
+        
+        let recipeViewController = RecipeViewController()
+        recipeViewController.view.backgroundColor = .red
+        recipeViewController.tabBarItem = UITabBarItem(title: "First", image: nil, selectedImage: nil)
+        
+        let secondViewController = UIViewController()
+        secondViewController.view.backgroundColor = .white
+        secondViewController.tabBarItem = UITabBarItem(title: "Second", image: nil, selectedImage: nil)
+        
+        let thirdViewController = UIViewController()
+        thirdViewController.view.backgroundColor = .yellow
+        thirdViewController.tabBarItem = UITabBarItem(title: "Third", image: nil, selectedImage: nil)
+        
+        
+        tabBarController.viewControllers = [recipeViewController, secondViewController, thirdViewController]
+        
+        
+        addChild(tabBarController)
+        tabBarController.view.frame = view.bounds
+        view.addSubview(tabBarController.view)
+        tabBarController.didMove(toParent: self)
+        
+        recipeViewController.didMove(toParent: tabBarController)
+    }
 }
+
+
+
+
 
