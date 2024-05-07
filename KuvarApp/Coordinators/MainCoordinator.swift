@@ -19,8 +19,10 @@ class MainCoordinator: BaseCoordinator {
     override func start() {
         let splashViewController = SplashScreenViewController(nibName: "SplashScreenViewController", bundle: nil)
         
+        
+        
         splashViewController.didFinishSplashScreen = { [weak self] in
-        self?.showMainScreen()
+            self?.showMainScreen()
         }
         
         window.rootViewController = splashViewController
@@ -32,6 +34,6 @@ class MainCoordinator: BaseCoordinator {
         navigationController.setViewControllers([mainViewController], animated: false)
         window.rootViewController = navigationController
         
-       
+        
     }
 }

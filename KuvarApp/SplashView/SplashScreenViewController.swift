@@ -26,13 +26,13 @@ class SplashScreenViewController: UIViewController {
     
     var didFinishSplashScreen: (() -> Void)?
     
-  
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-        print("Splash screen delay completed.")
-        self.didFinishSplashScreen?()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            print("Splash screen delay completed.")
+            self.didFinishSplashScreen?()
         }
         
         
