@@ -11,9 +11,9 @@ class RecipeViewController: UIViewController {
     var viewModel = RecipeViewModel()
     let headingImageView: UIImageView = {
             let imageView = UIImageView()
-            imageView.translatesAutoresizingMaskIntoConstraints = false // Enable Auto Layout
-            // Set any other properties you need for your image view
-            imageView.contentMode = .scaleAspectFill // Adjust the content mode as per your requirement
+            imageView.translatesAutoresizingMaskIntoConstraints = false
+            
+            imageView.contentMode = .scaleAspectFill
             return imageView
         }()
     
@@ -23,10 +23,10 @@ class RecipeViewController: UIViewController {
             
             // Setup constraints for the image view
         NSLayoutConstraint.activate([
-                headingImageView.topAnchor.constraint(equalTo: collectionView.topAnchor, constant: -18), // Adjust to below status bar
+                headingImageView.topAnchor.constraint(equalTo: collectionView.topAnchor, constant: -18), // Adjusting to below status bar
                 headingImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 12),
                 headingImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -12),
-                headingImageView.heightAnchor.constraint(equalToConstant: 10) // Adjust the height as per your requirement
+                headingImageView.heightAnchor.constraint(equalToConstant: 10)
             ])
         headingImageView.image = UIImage(named: "pageHeading")
        
