@@ -105,7 +105,7 @@ class RecipeCollectionViewCell: UICollectionViewCell {
             }
         }
         recipeNameLabel.text = recipe.label
-        secondLabel.text = String(recipe.totalTime) + " min" // Provide text for the second label
+        secondLabel.text = String(recipe.totalTime) + " min" // Providing text for the second label
         
         // Reset favorite state when configuring cell
         isFavorite = false
