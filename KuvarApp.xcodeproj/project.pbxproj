@@ -17,8 +17,12 @@
 		453A3DC22BD6851B00159D2F /* KuvarAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A3DC12BD6851B00159D2F /* KuvarAppUITestsLaunchTests.swift */; };
 		453A3DD92BD69AD400159D2F /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 453A3DD82BD69AD400159D2F /* MainViewController.xib */; };
 		453A3DDC2BD69EA400159D2F /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A3DD22BD68E9100159D2F /* BaseCoordinator.swift */; };
-		4585B9712BDF8FD1003B7F8C /* RecipesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4585B96F2BDF8FD1003B7F8C /* RecipesTableViewCell.swift */; };
-		4585B9722BDF8FD1003B7F8C /* RecipesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4585B9702BDF8FD1003B7F8C /* RecipesTableViewCell.xib */; };
+		4597E05B2BEDC127000D2931 /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4597E0562BEDC01B000D2931 /* Poppins-Black.ttf */; };
+		4597E05C2BEDC31C000D2931 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4597E0532BEDC01B000D2931 /* Poppins-Regular.ttf */; };
+		4597E05D2BEDC372000D2931 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4597E0582BEDC01B000D2931 /* Poppins-SemiBold.ttf */; };
+		459C9DDA2BEA868800AB190E /* RecipeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459C9DD82BEA868800AB190E /* RecipeCollectionViewCell.swift */; };
+		459C9DDB2BEA868800AB190E /* RecipeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 459C9DD92BEA868800AB190E /* RecipeCollectionViewCell.xib */; };
+		459C9DDE2BEB118400AB190E /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 459C9DDD2BEB118400AB190E /* AlamofireImage */; };
 		45AF79B02BDBA7BC003DE1F9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 45AF79AF2BDBA7BC003DE1F9 /* Alamofire */; };
 		45AF79B22BDBB742003DE1F9 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AF79B12BDBB742003DE1F9 /* Recipe.swift */; };
 		45AF79B42BDBBBF0003DE1F9 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AF79B32BDBBBF0003DE1F9 /* RecipeViewController.swift */; };
@@ -64,8 +68,27 @@
 		453A3DC12BD6851B00159D2F /* KuvarAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KuvarAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		453A3DD22BD68E9100159D2F /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		453A3DD82BD69AD400159D2F /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
-		4585B96F2BDF8FD1003B7F8C /* RecipesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesTableViewCell.swift; sourceTree = "<group>"; };
-		4585B9702BDF8FD1003B7F8C /* RecipesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipesTableViewCell.xib; sourceTree = "<group>"; };
+		4597E0482BEDC01B000D2931 /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
+		4597E0492BEDC01B000D2931 /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ThinItalic.ttf"; sourceTree = "<group>"; };
+		4597E04A2BEDC01B000D2931 /* Poppins-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		4597E04B2BEDC01B000D2931 /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BoldItalic.ttf"; sourceTree = "<group>"; };
+		4597E04C2BEDC01B000D2931 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		4597E04D2BEDC01B000D2931 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		4597E04E2BEDC01B000D2931 /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		4597E04F2BEDC01B000D2931 /* Poppins-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		4597E0502BEDC01B000D2931 /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
+		4597E0512BEDC01B000D2931 /* Poppins-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BlackItalic.ttf"; sourceTree = "<group>"; };
+		4597E0522BEDC01B000D2931 /* OFL.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		4597E0532BEDC01B000D2931 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		4597E0542BEDC01B000D2931 /* Poppins-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-LightItalic.ttf"; sourceTree = "<group>"; };
+		4597E0552BEDC01B000D2931 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		4597E0562BEDC01B000D2931 /* Poppins-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Black.ttf"; sourceTree = "<group>"; };
+		4597E0572BEDC01B000D2931 /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Thin.ttf"; sourceTree = "<group>"; };
+		4597E0582BEDC01B000D2931 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		4597E0592BEDC01B000D2931 /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Italic.ttf"; sourceTree = "<group>"; };
+		4597E05A2BEDC01B000D2931 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
+		459C9DD82BEA868800AB190E /* RecipeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCollectionViewCell.swift; sourceTree = "<group>"; };
+		459C9DD92BEA868800AB190E /* RecipeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeCollectionViewCell.xib; sourceTree = "<group>"; };
 		45AF79B12BDBB742003DE1F9 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		45AF79B32BDBBBF0003DE1F9 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		45AF79B52BDBBDFA003DE1F9 /* RecipeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeViewController.xib; sourceTree = "<group>"; };
@@ -84,6 +107,7 @@
 			files = (
 				45C828B72BE1156D0041BA9D /* MBProgressHUD in Frameworks */,
 				45AF79B02BDBA7BC003DE1F9 /* Alamofire in Frameworks */,
+				459C9DDE2BEB118400AB190E /* AlamofireImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,8 +151,9 @@
 		453A3D9D2BD6851A00159D2F /* KuvarApp */ = {
 			isa = PBXGroup;
 			children = (
+				4597E0472BEDC01B000D2931 /* Poppins */,
 				45C828BA2BE12A3F0041BA9D /* UseCase */,
-				45C828B42BE112F50041BA9D /* RecipeTableViewCell */,
+				45C828B42BE112F50041BA9D /* RecipeCollectionViewCell */,
 				45C828B32BE110B50041BA9D /* RecipeViewModel */,
 				45C828B22BE110760041BA9D /* RecipeModel */,
 				45C828B12BE1101D0041BA9D /* RecipeView */,
@@ -189,6 +214,32 @@
 			path = SplashView;
 			sourceTree = "<group>";
 		};
+		4597E0472BEDC01B000D2931 /* Poppins */ = {
+			isa = PBXGroup;
+			children = (
+				4597E0482BEDC01B000D2931 /* Poppins-ExtraLight.ttf */,
+				4597E0492BEDC01B000D2931 /* Poppins-ThinItalic.ttf */,
+				4597E04A2BEDC01B000D2931 /* Poppins-ExtraLightItalic.ttf */,
+				4597E04B2BEDC01B000D2931 /* Poppins-BoldItalic.ttf */,
+				4597E04C2BEDC01B000D2931 /* Poppins-Light.ttf */,
+				4597E04D2BEDC01B000D2931 /* Poppins-Medium.ttf */,
+				4597E04E2BEDC01B000D2931 /* Poppins-SemiBoldItalic.ttf */,
+				4597E04F2BEDC01B000D2931 /* Poppins-ExtraBoldItalic.ttf */,
+				4597E0502BEDC01B000D2931 /* Poppins-ExtraBold.ttf */,
+				4597E0512BEDC01B000D2931 /* Poppins-BlackItalic.ttf */,
+				4597E0522BEDC01B000D2931 /* OFL.txt */,
+				4597E0532BEDC01B000D2931 /* Poppins-Regular.ttf */,
+				4597E0542BEDC01B000D2931 /* Poppins-LightItalic.ttf */,
+				4597E0552BEDC01B000D2931 /* Poppins-Bold.ttf */,
+				4597E0562BEDC01B000D2931 /* Poppins-Black.ttf */,
+				4597E0572BEDC01B000D2931 /* Poppins-Thin.ttf */,
+				4597E0582BEDC01B000D2931 /* Poppins-SemiBold.ttf */,
+				4597E0592BEDC01B000D2931 /* Poppins-Italic.ttf */,
+				4597E05A2BEDC01B000D2931 /* Poppins-MediumItalic.ttf */,
+			);
+			path = Poppins;
+			sourceTree = "<group>";
+		};
 		45C5567E2BDB8AE30097C517 /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,13 +273,13 @@
 			path = RecipeViewModel;
 			sourceTree = "<group>";
 		};
-		45C828B42BE112F50041BA9D /* RecipeTableViewCell */ = {
+		45C828B42BE112F50041BA9D /* RecipeCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				4585B96F2BDF8FD1003B7F8C /* RecipesTableViewCell.swift */,
-				4585B9702BDF8FD1003B7F8C /* RecipesTableViewCell.xib */,
+				459C9DD82BEA868800AB190E /* RecipeCollectionViewCell.swift */,
+				459C9DD92BEA868800AB190E /* RecipeCollectionViewCell.xib */,
 			);
-			path = RecipeTableViewCell;
+			path = RecipeCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		45C828BA2BE12A3F0041BA9D /* UseCase */ = {
@@ -258,6 +309,7 @@
 			packageProductDependencies = (
 				45AF79AF2BDBA7BC003DE1F9 /* Alamofire */,
 				45C828B62BE1156D0041BA9D /* MBProgressHUD */,
+				459C9DDD2BEB118400AB190E /* AlamofireImage */,
 			);
 			productName = KuvarApp;
 			productReference = 453A3D9B2BD6851A00159D2F /* KuvarApp.app */;
@@ -334,6 +386,7 @@
 			packageReferences = (
 				45AF79AE2BDBA7BC003DE1F9 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				45C828B52BE1156D0041BA9D /* XCRemoteSwiftPackageReference "MBProgressHUD" */,
+				459C9DDC2BEB118400AB190E /* XCRemoteSwiftPackageReference "AlamofireImage" */,
 			);
 			productRefGroup = 453A3D9C2BD6851A00159D2F /* Products */;
 			projectDirPath = "";
@@ -351,10 +404,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4597E05D2BEDC372000D2931 /* Poppins-SemiBold.ttf in Resources */,
+				4597E05C2BEDC31C000D2931 /* Poppins-Regular.ttf in Resources */,
+				4597E05B2BEDC127000D2931 /* Poppins-Black.ttf in Resources */,
 				453A3DAB2BD6851B00159D2F /* LaunchScreen.storyboard in Resources */,
+				459C9DDB2BEA868800AB190E /* RecipeCollectionViewCell.xib in Resources */,
 				45C726C12BD7FE7C00B432D2 /* SplashScreenViewController.xib in Resources */,
 				45AF79B62BDBBDFA003DE1F9 /* RecipeViewController.xib in Resources */,
-				4585B9722BDF8FD1003B7F8C /* RecipesTableViewCell.xib in Resources */,
 				453A3DD92BD69AD400159D2F /* MainViewController.xib in Resources */,
 				453A3DA82BD6851B00159D2F /* Assets.xcassets in Resources */,
 			);
@@ -385,8 +441,8 @@
 				453A3D9F2BD6851A00159D2F /* AppDelegate.swift in Sources */,
 				45C556802BDB8B7C0097C517 /* RecipeAPIClient.swift in Sources */,
 				45C828B92BE121030041BA9D /* RecipeUseCase.swift in Sources */,
-				4585B9712BDF8FD1003B7F8C /* RecipesTableViewCell.swift in Sources */,
 				45C726BF2BD7EF0100B432D2 /* SplashScreenViewController.swift in Sources */,
+				459C9DDA2BEA868800AB190E /* RecipeCollectionViewCell.swift in Sources */,
 				453A3DA12BD6851A00159D2F /* SceneDelegate.swift in Sources */,
 				45C726BD2BD7985700B432D2 /* MainCoordinator.swift in Sources */,
 				45C828B02BE0F7790041BA9D /* RecipeViewModel.swift in Sources */,
@@ -720,6 +776,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		459C9DDC2BEB118400AB190E /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 		45AF79AE2BDBA7BC003DE1F9 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -739,6 +803,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		459C9DDD2BEB118400AB190E /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 459C9DDC2BEB118400AB190E /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
 		45AF79AF2BDBA7BC003DE1F9 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 45AF79AE2BDBA7BC003DE1F9 /* XCRemoteSwiftPackageReference "Alamofire" */;
