@@ -38,10 +38,10 @@ class RecipeCollectionViewCell: UICollectionViewCell {
         favoritesButton.tintColor = .red // Setting default tint color
         favoritesButton.isUserInteractionEnabled = true
         contentView.addSubview(favoritesButton) // Adding button to the content view
-
-
-
-            
+        
+        
+        
+        
         
         // create and configure UILabel for recipe name
         recipeNameLabel = UILabel()
@@ -92,17 +92,14 @@ class RecipeCollectionViewCell: UICollectionViewCell {
             favoritesButton.tintColor = .black
         }
     }
-
-
+    
+    
     
     func configure(with recipe: Recipe) {
         // fetching the image asynchronously
         if let url = URL(string: recipe.imageURL) {
-            AF.request(url).responseImage { response in
-                if case .success(let image) = response.result {
-                    self.recipeImageView.image = image
-                }
-            }
+            
+            recipeImageView.af.setImage(withURL: url)
         }
         recipeNameLabel.text = recipe.label
         secondLabel.text = String(recipe.totalTime) + " min" // Providing text for the second label
