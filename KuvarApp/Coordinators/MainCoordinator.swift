@@ -33,6 +33,7 @@ class MainCoordinator: BaseCoordinator {
         let mainViewController = MainViewController()
         navigationController.setViewControllers([mainViewController], animated: false)
         window.rootViewController = navigationController
+      //  navigationController.navigationBar.backgroundColor = .blue
         
         
     }

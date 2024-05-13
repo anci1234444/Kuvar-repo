@@ -24,18 +24,22 @@ class MainViewController: UIViewController {
         let tabBarController = UITabBarController()
         
         let recipeViewController = RecipeViewController()
-        recipeViewController.view.backgroundColor = .red
-        recipeViewController.tabBarItem = UITabBarItem(title: "First", image: nil, selectedImage: nil)
+        recipeViewController.view.backgroundColor = .white
+
+        recipeViewController.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "Active.png"), selectedImage: UIImage(named: "Active.png"))
+       
+
         
         let secondViewController = UIViewController()
         secondViewController.view.backgroundColor = .white
-        secondViewController.tabBarItem = UITabBarItem(title: "Second", image: nil, selectedImage: nil)
+        secondViewController.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "Recipes.png"), selectedImage:
+        UIImage(named: "Recipes.png"))
         
         let thirdViewController = UIViewController()
         thirdViewController.view.backgroundColor = .yellow
-        thirdViewController.tabBarItem = UITabBarItem(title: "Third", image: nil, selectedImage: nil)
+        thirdViewController.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "Favorites.png"), selectedImage: UIImage(named: "Favorites.png"))
         
-        
+        tabBarController.tabBar.tintColor = .red
         tabBarController.viewControllers = [recipeViewController, secondViewController, thirdViewController]
         
         

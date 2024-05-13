@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RecipeViewController" customModule="KuvarApp" customModuleProvider="target">
             <connections>
-                <outlet property="tableView" destination="7gM-Ie-UOa" id="tMg-Iv-CJY"/>
+                <outlet property="collectionView" destination="yj2-7x-vHK" id="ySR-YX-xKH"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Iyw-zT-w3g"/>
             </connections>
         </placeholder>
@@ -19,18 +19,25 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="RecipesCell" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="7gM-Ie-UOa">
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="yj2-7x-vHK">
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                </tableView>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="v2a-ya-C8I">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="7gM-Ie-UOa" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Hg2-em-XyE"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="7gM-Ie-UOa" secondAttribute="bottom" id="YXb-I6-AmB"/>
-                <constraint firstItem="7gM-Ie-UOa" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="qWa-37-ppe"/>
-                <constraint firstItem="7gM-Ie-UOa" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="yCm-Qq-OtG"/>
+                <constraint firstItem="yj2-7x-vHK" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="1Kz-Oq-Qyk"/>
+                <constraint firstItem="yj2-7x-vHK" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="VrJ-Kl-Az6"/>
+                <constraint firstItem="yj2-7x-vHK" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ZGt-Wb-3JS"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="yj2-7x-vHK" secondAttribute="trailing" id="bVd-ef-x9h"/>
+                <constraint firstItem="yj2-7x-vHK" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="efC-99-2cx"/>
             </constraints>
             <point key="canvasLocation" x="-16.030534351145036" y="-11.267605633802818"/>
         </view>

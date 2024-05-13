@@ -7,10 +7,10 @@
 
 import UIKit
 import Alamofire
+import AlamofireImage
 import MBProgressHUD
 
 class RecipeAPIClient {
-    // static let shared = RecipeAPIClient()
     
     private let baseUrl = "https://api.edamam.com"
     private let appId = "e665eb00"
@@ -58,6 +58,7 @@ struct RecipeResponse: Codable {
     
     struct Hit: Codable {
         let recipe: Recipe
+        
     }
 }
 
