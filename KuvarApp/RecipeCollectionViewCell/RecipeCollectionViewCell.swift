@@ -5,6 +5,7 @@ import MBProgressHUD
 
 class RecipeCollectionViewCell: UICollectionViewCell {
     
+    var recipe:Recipe!
     var recipeImageView: UIImageView!
     var recipeNameLabel: UILabel!
     var secondLabel: UILabel!
@@ -83,19 +84,20 @@ class RecipeCollectionViewCell: UICollectionViewCell {
     
     @objc func favoritesButtonTapped() {
         isFavorite.toggle()
-        
         if isFavorite {
-            // Setting tint color to red to represent favorited state
-            favoritesButton.tintColor = .red
+            favoritesButton.setImage(UIImage(named: "favoriteFilled.png")?.withRenderingMode(.alwaysTemplate), for: .normal)
         } else {
-            // Reset tint color to default to represent unfavorited state
-            favoritesButton.tintColor = .black
+            favoritesButton.setImage(UIImage(named: "favorite.png")?.withRenderingMode(.alwaysTemplate), for: .normal)
         }
+        
+        // saaave favorite state to UserDefaults
+        UserDefaults.standard.set(isFavorite, forKey: "favorite_\(recipe.label)")
     }
     
     
     
     func configure(with recipe: Recipe) {
+        
         // fetching the image asynchronously
         if let url = URL(string: recipe.imageURL) {
             
@@ -104,8 +106,16 @@ class RecipeCollectionViewCell: UICollectionViewCell {
         recipeNameLabel.text = recipe.label
         secondLabel.text = String(recipe.totalTime) + " min" // Providing text for the second label
         
-        // Reset favorite state when configuring cell
-        isFavorite = false
         favoritesButton.tintColor = .red // Setting initial tint color
+        self.recipe = recipe
+        // retrieve favorite state from UserDefaults.
+        isFavorite = UserDefaults.standard.bool(forKey: "favorite_\(recipe.label)")
+        
+        if isFavorite {
+            favoritesButton.setImage(UIImage(named: "favoriteFilled.png")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        } else {
+            favoritesButton.setImage(UIImage(named: "favorite.png")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        }
+        
     }
 }
