@@ -5,6 +5,7 @@ import MBProgressHUD
 
 class RecipeCollectionViewCell: UICollectionViewCell {
     
+    var recipe:Recipe!
     var recipeImageView: UIImageView!
     var recipeNameLabel: UILabel!
     var secondLabel: UILabel!
@@ -81,31 +82,89 @@ class RecipeCollectionViewCell: UICollectionViewCell {
         ])
     }
     
-    @objc func favoritesButtonTapped() {
-        isFavorite.toggle()
+    
+    
+    private let favoritesKey = "coovarFavorites" // key to save favorites in UserDefaults
+    
+    // function to check if the recipe is in favorites..
+    private func isRecipeFavorite() -> Bool {
+        guard let favoriteRecipesData = UserDefaults.standard.array(forKey: favoritesKey) as? [Data] else {
+            return false
+        }
         
-        if isFavorite {
-            // Setting tint color to red to represent favorited state
-            favoritesButton.tintColor = .red
-        } else {
-            // Reset tint color to default to represent unfavorited state
-            favoritesButton.tintColor = .black
+        // checking if a recipe exists in favorites based on its label.
+        return favoriteRecipesData.contains {
+            if let storedRecipe = try? JSONDecoder().decode(Recipe.self, from: $0) {
+                return storedRecipe.label == recipe.label
+            }
+            return false
         }
     }
     
+    // Function to add recipe to favorites.
+    private func addToFavorites() {
+        var favoriteRecipes = UserDefaults.standard.array(forKey: favoritesKey) as? [Data] ?? []
+        
+        //Storing the entire recipe object as Data in UserDefaults
+        do {
+            let recipeData = try JSONEncoder().encode(recipe)
+            favoriteRecipes.append(recipeData)
+            UserDefaults.standard.set(favoriteRecipes, forKey: favoritesKey)
+        } catch {
+            print("Error encoding recipe: \(error.localizedDescription)")
+        }
+    }
+    
+    // function to remove recipe from favorites
+    private func removeFromFavorites() {
+        var favoriteRecipes = UserDefaults.standard.array(forKey: favoritesKey) as? [Data] ?? []
+        
+        // removing the recipe from the list of favorites
+        if let index = favoriteRecipes.firstIndex(where: { data in
+            if let storedRecipe = try? JSONDecoder().decode(Recipe.self, from: data) {
+                return storedRecipe.label == recipe.label
+            }
+            return false
+        }) {
+            favoriteRecipes.remove(at: index)
+            UserDefaults.standard.set(favoriteRecipes, forKey: favoritesKey)
+        }
+    }
+    
+    
+    
+    @objc func favoritesButtonTapped() {
+        isFavorite = !isFavorite // Updating the state of favorites...
+        
+        // Updating the heart display based on the favorite state
+        if isFavorite {
+            favoritesButton.setImage(UIImage(named: "favoriteFilled.png")?.withRenderingMode(.alwaysTemplate), for: .normal)
+            addToFavorites()
+        } else {
+            favoritesButton.setImage(UIImage(named: "favorite.png")?.withRenderingMode(.alwaysTemplate), for: .normal)
+            removeFromFavorites()
+        }
+    }
     
     
     func configure(with recipe: Recipe) {
+        
+        self.recipe = recipe
+        
         // fetching the image asynchronously
         if let url = URL(string: recipe.imageURL) {
-            
             recipeImageView.af.setImage(withURL: url)
         }
-        recipeNameLabel.text = recipe.label
-        secondLabel.text = String(recipe.totalTime) + " min" // Providing text for the second label
         
-        // Reset favorite state when configuring cell
-        isFavorite = false
-        favoritesButton.tintColor = .red // Setting initial tint color
+        // setting the recipe name and time
+        recipeNameLabel.text = recipe.label
+        secondLabel.text = "\(recipe.totalTime) min"
+        
+        // Checking and setting the status of favorites.
+        isFavorite = isRecipeFavorite()
+        let favoriteImageName = isFavorite ? "favoriteFilled.png" : "favorite.png"
+        favoritesButton.setImage(UIImage(named: favoriteImageName)?.withRenderingMode(.alwaysTemplate), for: .normal)
     }
+    
+    
 }

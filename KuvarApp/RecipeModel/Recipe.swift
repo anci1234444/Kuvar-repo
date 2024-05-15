@@ -10,15 +10,19 @@ import Alamofire
 import MBProgressHUD
 
 struct Recipe: Codable {
+    
     let imageURL: String
     let label: String
     let totalTime:Int
+    // var isFavorite: Bool? = false
     
     
     enum CodingKeys: String, CodingKey {
+        
         case imageURL = "image"
         case label
         case totalTime
+        // case isFavorite
     }
 }
 
