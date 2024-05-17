@@ -84,7 +84,7 @@ class RecipeCollectionViewCell: UICollectionViewCell {
     
     
     
-    private let favoritesKey = "coovarFavorites" // key to save favorites in UserDefaults
+    public let favoritesKey = "coovarFavorites" // key to save favorites in UserDefaults
     
     // function to check if the recipe is in favorites..
     private func isRecipeFavorite() -> Bool {
@@ -159,6 +159,37 @@ class RecipeCollectionViewCell: UICollectionViewCell {
         // setting the recipe name and time
         recipeNameLabel.text = recipe.label
         secondLabel.text = "\(recipe.totalTime) min"
+        
+        
+        contentView.subviews.forEach { subview in
+             if subview.tag == 999 {
+                 subview.removeFromSuperview()
+             }
+         }
+         
+         
+        if recipe.totalTime >= 0 {
+            if let totalTimeLabel = contentView.viewWithTag(999) as? UILabel {
+                totalTimeLabel.text = "\(recipe.totalTime) min"
+            } else {
+                let totalTimeLabel = UILabel()
+                totalTimeLabel.translatesAutoresizingMaskIntoConstraints = false
+                totalTimeLabel.font = UIFont(name: "Poppins-SemiBold", size: 10)
+                totalTimeLabel.text = "\(recipe.totalTime) min"
+                totalTimeLabel.tag = 999 // Setting a tag to identify the total time label..
+                contentView.addSubview(totalTimeLabel) // Adding to contentView
+
+                // Set constraints for the total time label
+                NSLayoutConstraint.activate([
+                    totalTimeLabel.leadingAnchor.constraint(equalTo: secondLabel.leadingAnchor),
+                    totalTimeLabel.topAnchor.constraint(equalTo: secondLabel.bottomAnchor, constant: 5), // Adjusted top constraint.
+                    totalTimeLabel.trailingAnchor.constraint(equalTo: secondLabel.trailingAnchor),
+                    totalTimeLabel.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor, constant: -8)
+                ])
+            }
+        }
+
+            
         
         // Checking and setting the status of favorites.
         isFavorite = isRecipeFavorite()

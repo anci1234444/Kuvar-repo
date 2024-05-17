@@ -27,6 +27,10 @@
 		45AF79B22BDBB742003DE1F9 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AF79B12BDBB742003DE1F9 /* Recipe.swift */; };
 		45AF79B42BDBBBF0003DE1F9 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AF79B32BDBBBF0003DE1F9 /* RecipeViewController.swift */; };
 		45AF79B62BDBBDFA003DE1F9 /* RecipeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45AF79B52BDBBDFA003DE1F9 /* RecipeViewController.xib */; };
+		45BB77A02BF4DB72005ED9B0 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BB779F2BF4DB72005ED9B0 /* FavoritesViewController.swift */; };
+		45BB77A22BF4DBCF005ED9B0 /* FavoritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45BB77A12BF4DBCF005ED9B0 /* FavoritesViewController.xib */; };
+		45BB77A62BF4E215005ED9B0 /* FavoriteRecipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BB77A42BF4E215005ED9B0 /* FavoriteRecipeTableViewCell.swift */; };
+		45BB77A72BF4E215005ED9B0 /* FavoriteRecipeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45BB77A52BF4E215005ED9B0 /* FavoriteRecipeTableViewCell.xib */; };
 		45C556802BDB8B7C0097C517 /* RecipeAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C5567F2BDB8B7C0097C517 /* RecipeAPIClient.swift */; };
 		45C726BD2BD7985700B432D2 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C726BC2BD7985700B432D2 /* MainCoordinator.swift */; };
 		45C726BF2BD7EF0100B432D2 /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C726BE2BD7EF0100B432D2 /* SplashScreenViewController.swift */; };
@@ -92,6 +96,10 @@
 		45AF79B12BDBB742003DE1F9 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		45AF79B32BDBBBF0003DE1F9 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		45AF79B52BDBBDFA003DE1F9 /* RecipeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeViewController.xib; sourceTree = "<group>"; };
+		45BB779F2BF4DB72005ED9B0 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		45BB77A12BF4DBCF005ED9B0 /* FavoritesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesViewController.xib; sourceTree = "<group>"; };
+		45BB77A42BF4E215005ED9B0 /* FavoriteRecipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRecipeTableViewCell.swift; sourceTree = "<group>"; };
+		45BB77A52BF4E215005ED9B0 /* FavoriteRecipeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteRecipeTableViewCell.xib; sourceTree = "<group>"; };
 		45C5567F2BDB8B7C0097C517 /* RecipeAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeAPIClient.swift; sourceTree = "<group>"; };
 		45C726BC2BD7985700B432D2 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		45C726BE2BD7EF0100B432D2 /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +159,8 @@
 		453A3D9D2BD6851A00159D2F /* KuvarApp */ = {
 			isa = PBXGroup;
 			children = (
+				45BB77A32BF4E1F7005ED9B0 /* FavoriteTableViewCell */,
+				45BB779E2BF4DB5F005ED9B0 /* FavoritesView */,
 				4597E0472BEDC01B000D2931 /* Poppins */,
 				45C828BA2BE12A3F0041BA9D /* UseCase */,
 				45C828B42BE112F50041BA9D /* RecipeCollectionViewCell */,
@@ -238,6 +248,24 @@
 				4597E05A2BEDC01B000D2931 /* Poppins-MediumItalic.ttf */,
 			);
 			path = Poppins;
+			sourceTree = "<group>";
+		};
+		45BB779E2BF4DB5F005ED9B0 /* FavoritesView */ = {
+			isa = PBXGroup;
+			children = (
+				45BB779F2BF4DB72005ED9B0 /* FavoritesViewController.swift */,
+				45BB77A12BF4DBCF005ED9B0 /* FavoritesViewController.xib */,
+			);
+			path = FavoritesView;
+			sourceTree = "<group>";
+		};
+		45BB77A32BF4E1F7005ED9B0 /* FavoriteTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				45BB77A42BF4E215005ED9B0 /* FavoriteRecipeTableViewCell.swift */,
+				45BB77A52BF4E215005ED9B0 /* FavoriteRecipeTableViewCell.xib */,
+			);
+			path = FavoriteTableViewCell;
 			sourceTree = "<group>";
 		};
 		45C5567E2BDB8AE30097C517 /* API */ = {
@@ -404,6 +432,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45BB77A72BF4E215005ED9B0 /* FavoriteRecipeTableViewCell.xib in Resources */,
 				4597E05D2BEDC372000D2931 /* Poppins-SemiBold.ttf in Resources */,
 				4597E05C2BEDC31C000D2931 /* Poppins-Regular.ttf in Resources */,
 				4597E05B2BEDC127000D2931 /* Poppins-Black.ttf in Resources */,
@@ -412,6 +441,7 @@
 				45C726C12BD7FE7C00B432D2 /* SplashScreenViewController.xib in Resources */,
 				45AF79B62BDBBDFA003DE1F9 /* RecipeViewController.xib in Resources */,
 				453A3DD92BD69AD400159D2F /* MainViewController.xib in Resources */,
+				45BB77A22BF4DBCF005ED9B0 /* FavoritesViewController.xib in Resources */,
 				453A3DA82BD6851B00159D2F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,6 +467,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45BB77A02BF4DB72005ED9B0 /* FavoritesViewController.swift in Sources */,
 				453A3DA32BD6851A00159D2F /* MainViewController.swift in Sources */,
 				453A3D9F2BD6851A00159D2F /* AppDelegate.swift in Sources */,
 				45C556802BDB8B7C0097C517 /* RecipeAPIClient.swift in Sources */,
@@ -445,6 +476,7 @@
 				459C9DDA2BEA868800AB190E /* RecipeCollectionViewCell.swift in Sources */,
 				453A3DA12BD6851A00159D2F /* SceneDelegate.swift in Sources */,
 				45C726BD2BD7985700B432D2 /* MainCoordinator.swift in Sources */,
+				45BB77A62BF4E215005ED9B0 /* FavoriteRecipeTableViewCell.swift in Sources */,
 				45C828B02BE0F7790041BA9D /* RecipeViewModel.swift in Sources */,
 				453A3DDC2BD69EA400159D2F /* BaseCoordinator.swift in Sources */,
 				45AF79B22BDBB742003DE1F9 /* Recipe.swift in Sources */,
