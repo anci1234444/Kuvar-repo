@@ -162,12 +162,12 @@ class RecipeCollectionViewCell: UICollectionViewCell {
         
         
         contentView.subviews.forEach { subview in
-             if subview.tag == 999 {
-                 subview.removeFromSuperview()
-             }
-         }
-         
-         
+            if subview.tag == 999 {
+                subview.removeFromSuperview()
+            }
+        }
+        
+        
         if recipe.totalTime >= 0 {
             if let totalTimeLabel = contentView.viewWithTag(999) as? UILabel {
                 totalTimeLabel.text = "\(recipe.totalTime) min"
@@ -178,7 +178,7 @@ class RecipeCollectionViewCell: UICollectionViewCell {
                 totalTimeLabel.text = "\(recipe.totalTime) min"
                 totalTimeLabel.tag = 999 // Setting a tag to identify the total time label..
                 contentView.addSubview(totalTimeLabel) // Adding to contentView
-
+                
                 // Set constraints for the total time label
                 NSLayoutConstraint.activate([
                     totalTimeLabel.leadingAnchor.constraint(equalTo: secondLabel.leadingAnchor),
@@ -188,8 +188,8 @@ class RecipeCollectionViewCell: UICollectionViewCell {
                 ])
             }
         }
-
-            
+        
+        
         
         // Checking and setting the status of favorites.
         isFavorite = isRecipeFavorite()

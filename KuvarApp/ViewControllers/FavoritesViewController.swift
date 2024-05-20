@@ -188,6 +188,9 @@ extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
     private func saveFavoriteRecipesToUserDefaults() {
         let favoriteRecipesData = favoriteRecipes.compactMap { try? JSONEncoder().encode($0) }
         UserDefaults.standard.set(favoriteRecipesData, forKey: favoritesKey)
+        
+        // post notification when favorites are updated...
+        NotificationCenter.default.post(name: Notification.Name("FavoriteRecipesUpdated"), object: nil)
     }
     
     

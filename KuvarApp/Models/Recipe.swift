@@ -15,7 +15,7 @@ struct Recipe: Codable {
     let label: String
     let totalTime:Int
     let ingredientLines:[String]
- 
+    
     
     
     enum CodingKeys: String, CodingKey {
@@ -24,7 +24,7 @@ struct Recipe: Codable {
         case label
         case totalTime
         case ingredientLines
-    
+        
     }
 }
 

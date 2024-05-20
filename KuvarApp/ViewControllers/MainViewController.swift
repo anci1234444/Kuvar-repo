@@ -25,15 +25,15 @@ class MainViewController: UIViewController {
         
         let recipeViewController = RecipeViewController()
         recipeViewController.view.backgroundColor = .white
-
+        
         recipeViewController.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "Active.png"), selectedImage: UIImage(named: "Active.png"))
-       
-
+        
+        
         
         let secondViewController = UIViewController()
         secondViewController.view.backgroundColor = .white
         secondViewController.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "Recipes.png"), selectedImage:
-        UIImage(named: "Recipes.png"))
+                                                        UIImage(named: "Recipes.png"))
         
         let favoritesViewController = FavoritesViewController()
         favoritesViewController.view.backgroundColor = .white
