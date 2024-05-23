@@ -25,22 +25,22 @@ class MainViewController: UIViewController {
         
         let recipeViewController = RecipeViewController()
         recipeViewController.view.backgroundColor = .white
-
+        
         recipeViewController.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "Active.png"), selectedImage: UIImage(named: "Active.png"))
-       
-
+        
+        
         
         let secondViewController = UIViewController()
         secondViewController.view.backgroundColor = .white
         secondViewController.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "Recipes.png"), selectedImage:
-        UIImage(named: "Recipes.png"))
+                                                        UIImage(named: "Recipes.png"))
         
-        let thirdViewController = UIViewController()
-        thirdViewController.view.backgroundColor = .yellow
-        thirdViewController.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "Favorites.png"), selectedImage: UIImage(named: "Favorites.png"))
+        let favoritesViewController = FavoritesViewController()
+        favoritesViewController.view.backgroundColor = .white
+        favoritesViewController.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "Favorites.png"), selectedImage: UIImage(named: "Favorites.png"))
         
         tabBarController.tabBar.tintColor = .red
-        tabBarController.viewControllers = [recipeViewController, secondViewController, thirdViewController]
+        tabBarController.viewControllers = [recipeViewController, secondViewController, favoritesViewController]
         
         
         addChild(tabBarController)

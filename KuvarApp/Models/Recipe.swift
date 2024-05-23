@@ -14,7 +14,8 @@ struct Recipe: Codable {
     let imageURL: String
     let label: String
     let totalTime:Int
-    // var isFavorite: Bool? = false
+    let ingredientLines:[String]
+    
     
     
     enum CodingKeys: String, CodingKey {
@@ -22,7 +23,8 @@ struct Recipe: Codable {
         case imageURL = "image"
         case label
         case totalTime
-        // case isFavorite
+        case ingredientLines
+        
     }
 }
 
