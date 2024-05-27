@@ -9,12 +9,12 @@ import UIKit
 import Alamofire
 import MBProgressHUD
 
-struct Recipe: Codable {
+struct Recipe: Codable, Equatable {
     
     let imageURL: String
     let label: String
     let totalTime:Int
-    let ingredientLines:[String]
+    let ingredientLines:[String]?
     
     
     

@@ -103,11 +103,11 @@ class FavoriteRecipeTableViewCell: UITableViewCell {
         
         recipeNameLabel.text = recipe.label
         
-        if let firstIngredient = recipe.ingredientLines.first {
+        if let firstIngredient = recipe.ingredientLines?.first {
             secondLabel.text = firstIngredient
             
             // Checking if there are more than one ingredient lines....
-            if recipe.ingredientLines.count > 1 {
+            if (recipe.ingredientLines?.count ?? 0) > 1 {
                 let readMoreButton = UIButton(type: .custom)
                 readMoreButton.setTitle("Read More", for: .normal)
                 readMoreButton.setTitleColor(.red, for: .normal)

@@ -55,8 +55,8 @@ class RecipeCollectionViewCell: UICollectionViewCell {
         secondLabel = UILabel()
         secondLabel.translatesAutoresizingMaskIntoConstraints = false
         secondLabel.numberOfLines = 0
-        secondLabel.font = UIFont(name: "Poppins-SemiBold", size: 10) // Adjust font size and weight as needed
-        secondLabel.textColor = .black // Changing the color as needed for highlighting
+        secondLabel.font = UIFont(name: "Poppins-SemiBold", size: 10)
+        secondLabel.textColor = .black // Changing the color for highlighting
         contentView.addSubview(secondLabel)
         
         // set up constraints
@@ -66,8 +66,8 @@ class RecipeCollectionViewCell: UICollectionViewCell {
             recipeImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
             recipeImageView.heightAnchor.constraint(equalToConstant: 125), // Setting a fixed height for the image
             
-            favoritesButton.topAnchor.constraint(equalTo: recipeImageView.topAnchor, constant: 8), // Adjusting top spacing as needed
-            favoritesButton.trailingAnchor.constraint(equalTo: recipeImageView.trailingAnchor, constant: -8), // Adjust right spacing as needed
+            favoritesButton.topAnchor.constraint(equalTo: recipeImageView.topAnchor, constant: 8),
+            favoritesButton.trailingAnchor.constraint(equalTo: recipeImageView.trailingAnchor, constant: -8),
             favoritesButton.widthAnchor.constraint(equalToConstant: 30), // Setting width of the button
             favoritesButton.heightAnchor.constraint(equalToConstant: 30), // Setting height of the button
             

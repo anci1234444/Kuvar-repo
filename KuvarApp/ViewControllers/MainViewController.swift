@@ -10,6 +10,7 @@ import UIKit
 class MainViewController: UIViewController {
     
     var recipeViewController = RecipeViewController()
+    var exploreViewController = ExploreRecipesViewController()
     
     
     override func viewDidLoad() {
@@ -22,17 +23,17 @@ class MainViewController: UIViewController {
         
         
         let tabBarController = UITabBarController()
+     //   let exploreViewController = UIViewController()
+            exploreViewController.view.backgroundColor = .white
+            let exploreRecipesView = ExploreRecipesViewController()
+            
+            
+            exploreViewController.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "Active.png"), selectedImage: UIImage(named: "Active.png"))
+        
         
         let recipeViewController = RecipeViewController()
         recipeViewController.view.backgroundColor = .white
-        
-        recipeViewController.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "Active.png"), selectedImage: UIImage(named: "Active.png"))
-        
-        
-        
-        let secondViewController = UIViewController()
-        secondViewController.view.backgroundColor = .white
-        secondViewController.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "Recipes.png"), selectedImage:
+        recipeViewController.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "Recipes.png"), selectedImage:
                                                         UIImage(named: "Recipes.png"))
         
         let favoritesViewController = FavoritesViewController()
@@ -40,7 +41,7 @@ class MainViewController: UIViewController {
         favoritesViewController.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "Favorites.png"), selectedImage: UIImage(named: "Favorites.png"))
         
         tabBarController.tabBar.tintColor = .red
-        tabBarController.viewControllers = [recipeViewController, secondViewController, favoritesViewController]
+        tabBarController.viewControllers = [exploreViewController, recipeViewController, favoritesViewController]
         
         
         addChild(tabBarController)
@@ -49,6 +50,7 @@ class MainViewController: UIViewController {
         tabBarController.didMove(toParent: self)
         
         recipeViewController.didMove(toParent: tabBarController)
+      
     }
 }
 
