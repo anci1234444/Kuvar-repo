@@ -9,10 +9,12 @@ import Alamofire
 import AlamofireImage
 
 
-
+protocol ExploreCellDelegate: AnyObject {
+    func didTapReadMore(for recipe: Recipe)
+}
 
 class RecipeCarouselItemCell: UICollectionViewCell {
-    
+    weak var delegate: ExploreCellDelegate?
     var imageView: UIImageView!
     var titleLabel: UILabel!
     var ingredientsLabel:UILabel!
@@ -36,7 +38,7 @@ class RecipeCarouselItemCell: UICollectionViewCell {
     }
     
     private func setupViews() {
-       
+        
         
         imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
@@ -77,7 +79,7 @@ class RecipeCarouselItemCell: UICollectionViewCell {
         contentContainerView.addSubview(ingredientsLabel)
         
         
-        
+        //creating fav button
         favoritesButton = UIButton(type: .custom)
         favoritesButton.translatesAutoresizingMaskIntoConstraints = false
         favoritesButton.setImage(UIImage(named: "favorite.png")?.withRenderingMode(.alwaysTemplate), for: .normal)
@@ -140,7 +142,7 @@ class RecipeCarouselItemCell: UICollectionViewCell {
         // Calculate the height required for the ingredientsLabel based on its content..
         let labelSize = ingredientsLabel.sizeThatFits(CGSize(width: contentView.bounds.width - 40, height: .greatestFiniteMagnitude))
         
-        // Updating the frame of the ingredientsLabel and the contentSize of the scrollView
+        // updating the frame of the ingredientsLabel and the contentSize of the scrollView
         ingredientsLabel.frame = CGRect(x: 20, y: titleLabel.frame.maxY + 35, width: contentView.bounds.width - 40, height: labelSize.height)
         
         // Adjusting content size of the scrol view to enable scrolling.
@@ -178,6 +180,22 @@ class RecipeCarouselItemCell: UICollectionViewCell {
         self.recipe = recipe
         updateFavoriteStatus()
         
+        //creating read more button
+        let readMoreButton = UIButton(type: .custom)
+        readMoreButton.setTitle("Read More", for: .normal)
+        readMoreButton.setTitleColor(.red, for: .normal)
+        readMoreButton.titleLabel?.font = UIFont(name: "Poppins-SemiBold", size: 8)
+        readMoreButton.addTarget(self, action: #selector(readMoreTapped), for: .touchUpInside)
+        readMoreButton.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(readMoreButton)
+        
+        // setup constraints for the Read More button
+        NSLayoutConstraint.activate([
+            readMoreButton.leadingAnchor.constraint(equalTo: contentContainerView.leadingAnchor, constant:20),
+            readMoreButton.trailingAnchor.constraint(equalTo: contentContainerView.trailingAnchor,constant: -5),
+            readMoreButton.topAnchor.constraint(equalTo:  contentContainerView.topAnchor, constant: 10),
+     
+        ])
     }
     
     // Function to update favorite status and UI
@@ -209,20 +227,13 @@ class RecipeCarouselItemCell: UICollectionViewCell {
         
         return false
     }
+    @objc func readMoreTapped() {
+        print("Read More tapped")
+        if let recipe = self.recipe {
+            delegate?.didTapReadMore(for: recipe)
+        }
+        
+    }
     
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -3,14 +3,18 @@ import Alamofire
 import AlamofireImage
 import MBProgressHUD
 
+protocol RecipeCellDelegate: AnyObject {
+    func didTapReadMore(for recipe: Recipe)
+}
 class RecipeCollectionViewCell: UICollectionViewCell {
-    
+    weak var delegate: RecipeCellDelegate?
     var recipe:Recipe!
     var recipeImageView: UIImageView!
     var recipeNameLabel: UILabel!
     var secondLabel: UILabel!
     var favoritesButton: UIButton! // Add favorites button
     var isFavorite: Bool = false // Track favorite state
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -59,6 +63,12 @@ class RecipeCollectionViewCell: UICollectionViewCell {
         secondLabel.textColor = .black // Changing the color for highlighting
         contentView.addSubview(secondLabel)
         
+        
+        
+        // setup constraints for the Read More button
+        
+        
+        
         // set up constraints
         NSLayoutConstraint.activate([
             recipeImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
@@ -78,7 +88,10 @@ class RecipeCollectionViewCell: UICollectionViewCell {
             secondLabel.topAnchor.constraint(equalTo: recipeNameLabel.bottomAnchor, constant: 2),
             secondLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
             secondLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
-            secondLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8)
+            secondLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
+            
+            
+            
         ])
     }
     
@@ -189,6 +202,19 @@ class RecipeCollectionViewCell: UICollectionViewCell {
             }
         }
         
+        let readMoreButton = UIButton(type: .custom)
+        readMoreButton.setTitle("Read More", for: .normal)
+        readMoreButton.setTitleColor(.red, for: .normal)
+        readMoreButton.titleLabel?.font = UIFont(name: "Poppins-SemiBold", size: 8)
+        readMoreButton.addTarget(self, action: #selector(readMoreTapped), for: .touchUpInside)
+        readMoreButton.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(readMoreButton)
+        
+        NSLayoutConstraint.activate([
+            readMoreButton.leadingAnchor.constraint(equalTo: secondLabel.trailingAnchor, constant: -40),
+            readMoreButton.topAnchor.constraint(equalTo: secondLabel.topAnchor),
+            readMoreButton.bottomAnchor.constraint(equalTo: secondLabel.bottomAnchor)
+        ])
         
         
         // Checking and setting the status of favorites.
@@ -197,5 +223,10 @@ class RecipeCollectionViewCell: UICollectionViewCell {
         favoritesButton.setImage(UIImage(named: favoriteImageName)?.withRenderingMode(.alwaysTemplate), for: .normal)
     }
     
-    
+    @objc func readMoreTapped() {
+        print("Read More tapped")
+        if let recipe = self.recipe {
+            delegate?.didTapReadMore(for: recipe)
+        }
+    }
 }

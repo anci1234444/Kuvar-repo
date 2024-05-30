@@ -31,9 +31,11 @@ class MainCoordinator: BaseCoordinator {
     
     func showMainScreen() {
         let mainViewController = MainViewController()
-        navigationController.setViewControllers([mainViewController], animated: false)
-        window.rootViewController = navigationController
-        //  navigationController.navigationBar.backgroundColor = .blue
+     //  navigationController.setViewControllers([mainViewController], animated: false)
+    //  window.rootViewController = navigationController
+      let mainNavigationController = UINavigationController(rootViewController: mainViewController)
+       window.rootViewController = mainNavigationController
+        
         
         
     }

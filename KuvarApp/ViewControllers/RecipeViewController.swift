@@ -2,7 +2,7 @@ import UIKit
 import Alamofire
 import MBProgressHUD
 
-class RecipeViewController: UIViewController {
+class RecipeViewController: UIViewController, RecipeCellDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -86,8 +86,19 @@ extension RecipeViewController: UICollectionViewDelegate, UICollectionViewDataSo
         
         let recipe = viewModel.recipes[indexPath.item]
         cell.configure(with: recipe)
-        
+        cell.delegate = self
         return cell
+    }
+    
+    func didTapReadMore(for recipe: Recipe) {
+        // Instantiating RecipeDetailsViewController
+        let recipeDetailsVC = RecipeDetailsViewController()
+        recipeDetailsVC.recipe = recipe
+        
+    
+        
+        navigationController?.pushViewController(recipeDetailsVC, animated: true)
+        
     }
 }
 

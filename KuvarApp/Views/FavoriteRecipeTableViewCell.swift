@@ -9,7 +9,11 @@ import UIKit
 import Alamofire
 import AlamofireImage
 
+protocol FavoriteRecipeCellDelegate: AnyObject {
+    func didTapReadMore(for recipe: Recipe)
+}
 class FavoriteRecipeTableViewCell: UITableViewCell {
+    weak var delegate: FavoriteRecipeCellDelegate?
     var recipe: Recipe!
     var recipeImageView: UIImageView!
     var recipeNameLabel: UILabel!
@@ -118,9 +122,9 @@ class FavoriteRecipeTableViewCell: UITableViewCell {
                 
                 // setup constraints for the Read More button
                 NSLayoutConstraint.activate([
-                    readMoreButton.leadingAnchor.constraint(equalTo: secondLabel.trailingAnchor, constant: -40), // Adjust the constant value as needed
+                    readMoreButton.leadingAnchor.constraint(equalTo: secondLabel.trailingAnchor, constant: -40),
                     readMoreButton.topAnchor.constraint(equalTo: secondLabel.topAnchor),
-                    readMoreButton.bottomAnchor.constraint(equalTo: secondLabel.bottomAnchor),
+                    readMoreButton.bottomAnchor.constraint(equalTo: secondLabel.bottomAnchor)
                     
                     
                     
@@ -136,6 +140,9 @@ class FavoriteRecipeTableViewCell: UITableViewCell {
     
     @objc func readMoreTapped() {
         print("Read More tapped")
+        if let recipe = self.recipe {
+            delegate?.didTapReadMore(for: recipe)
+        }
     }
+    
 }
-

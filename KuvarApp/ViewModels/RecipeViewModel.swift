@@ -16,14 +16,14 @@ class RecipeViewModel {
     var recipes: [Recipe] = []
     
     func fetchExploreRecipes(completion: @escaping (Error?) -> Void) {
-        // Ovde možete postaviti query za pretragu recepata koje želite da prikažete na ekranu za istraživanje
-        let query = "explore" // Primer: "explore"
+     
+        let query = "explore"
         
-        // Pozivamo metodu iz RecipeUseCase koja će dohvatiti željene recepte
+        // calling a method from RecipeUseCase that will retrieve the desired recipes
         recipeUseCase.fetchRecipes(query: query) { [weak self] result in
             switch result {
             case .success(let recipes):
-                // Čuvamo samo prvih 10 recepata za ekran za istraživanje
+                // save first 10 recipes
                 self?.recipes = Array(recipes.prefix(10))
                // self?.recipes = recipes
            //     print("Fetched recipes successfully:", self?.recipes)

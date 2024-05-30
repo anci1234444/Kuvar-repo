@@ -6,9 +6,17 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireImage
 
 
-class ExploreRecipesViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class ExploreRecipesViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, ExploreCellDelegate {
+    func didTapReadMore(for recipe: Recipe) {
+        let recipeDetailsVC = RecipeDetailsViewController()
+        recipeDetailsVC.recipe = recipe
+        navigationController?.pushViewController(recipeDetailsVC, animated: true)
+    }
+    
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var pageControl: UIPageControl!
@@ -104,6 +112,7 @@ class ExploreRecipesViewController: UIViewController, UICollectionViewDelegate, 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RecipeCarouselItemCell", for: indexPath) as! RecipeCarouselItemCell
         let recipe = recipes[indexPath.item]
         cell.configure(with: recipe)
+        cell.delegate = self
         return cell
     }
     
