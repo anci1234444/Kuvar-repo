@@ -3,9 +3,14 @@ import Alamofire
 import MBProgressHUD
 
 class RecipeViewController: UIViewController, RecipeCellDelegate {
+    func didTapReadMore(for recipe: Recipe) {
+        coordinator?.showRecipeDetails(for: recipe, controller: self)
+    }
+    
+    
     
     @IBOutlet weak var collectionView: UICollectionView!
-    
+    weak var coordinator: MainCoordinator?
     
     
     var viewModel = RecipeViewModel()
@@ -86,18 +91,19 @@ extension RecipeViewController: UICollectionViewDelegate, UICollectionViewDataSo
         
         let recipe = viewModel.recipes[indexPath.item]
         cell.configure(with: recipe)
-        cell.delegate = self
+      cell.delegate = self
         return cell
     }
     
-    func didTapReadMore(for recipe: Recipe) {
+    func didTapReadMore(for recipe: Recipe, navigationController: UINavigationController?) {
         // Instantiating RecipeDetailsViewController
-        let recipeDetailsVC = RecipeDetailsViewController()
-        recipeDetailsVC.recipe = recipe
+      //  let recipeDetailsVC = RecipeDetailsViewController()
+      //  recipeDetailsVC.recipe = recipe
         
-    
+        // Present the RecipeDetailsViewController modally
+      //     present(recipeDetailsVC, animated: true, completion: nil)
         
-        navigationController?.pushViewController(recipeDetailsVC, animated: true)
+        coordinator?.showRecipeDetails(for: recipe, controller: self)
         
     }
 }

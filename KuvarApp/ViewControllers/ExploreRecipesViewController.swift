@@ -11,10 +11,15 @@ import AlamofireImage
 
 
 class ExploreRecipesViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, ExploreCellDelegate {
+    weak var coordinator: MainCoordinator?
+
     func didTapReadMore(for recipe: Recipe) {
-        let recipeDetailsVC = RecipeDetailsViewController()
-        recipeDetailsVC.recipe = recipe
-        navigationController?.pushViewController(recipeDetailsVC, animated: true)
+     //   let recipeDetailsVC = RecipeDetailsViewController()
+   //     recipeDetailsVC.recipe = recipe
+    
+        // Presenting the RecipeDetailsViewController modally
+        //   present(recipeDetailsVC, animated: true, completion: nil)
+        coordinator?.showRecipeDetails(for: recipe, controller: self)
     }
     
     
@@ -22,6 +27,7 @@ class ExploreRecipesViewController: UIViewController, UICollectionViewDelegate, 
     @IBOutlet weak var pageControl: UIPageControl!
     
     var recipes: [Recipe] = []
+    var isFavorite: Bool = false
     var viewModel = RecipeViewModel()
     
     
@@ -49,6 +55,8 @@ class ExploreRecipesViewController: UIViewController, UICollectionViewDelegate, 
         view.addSubview(additionalImageView)
         view.addSubview(pageControl)
         
+        
+      
         // Setup constraints for the image view
         NSLayoutConstraint.activate([
             headingImageView.topAnchor.constraint(equalTo: collectionView.topAnchor, constant: -18), // Adjusting to below status bar
@@ -64,13 +72,16 @@ class ExploreRecipesViewController: UIViewController, UICollectionViewDelegate, 
         ])
         headingImageView.image = UIImage(named: "pageHeading")
         additionalImageView.image = UIImage(named: "Header")
-        let layout = UICollectionViewFlowLayout()
+       let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
+      
         collectionView.collectionViewLayout = layout
+        collectionView.isScrollEnabled = false
+        collectionView.isPagingEnabled = true // Enable paging
         // Set up the collection view
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.isPagingEnabled = true // Enable paging
+ 
         pageControl.currentPageIndicatorTintColor = .black
         pageControl.pageIndicatorTintColor = .lightGray // Change to desired color
         //     collectionView.contentInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
@@ -79,8 +90,10 @@ class ExploreRecipesViewController: UIViewController, UICollectionViewDelegate, 
         collectionView.register(cellNib, forCellWithReuseIdentifier: "RecipeCarouselItemCell")
         // Fetch explore recipes
         fetchExploreRecipes()
+       
     }
     
+   
     func fetchExploreRecipes() {
         let viewModel = RecipeViewModel()
         viewModel.fetchExploreRecipes { [weak self] error in
@@ -99,7 +112,7 @@ class ExploreRecipesViewController: UIViewController, UICollectionViewDelegate, 
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        fetchExploreRecipes()
+    
         print("numberOfPages in viewDidAppear:", pageControl.numberOfPages)
     }
     
@@ -113,6 +126,8 @@ class ExploreRecipesViewController: UIViewController, UICollectionViewDelegate, 
         let recipe = recipes[indexPath.item]
         cell.configure(with: recipe)
         cell.delegate = self
+        
+   
         return cell
     }
     
@@ -135,18 +150,28 @@ extension ExploreRecipesViewController: UIScrollViewDelegate {
         
         let pageIndex = round(scrollView.contentOffset.x/view.frame.width)
        
-        pageControl.currentPage = min(max(0, Int(pageIndex)), 9) // Ensure currentPage doesn't exceed 9
-    }
+       pageControl.currentPage = min(max(0, Int(pageIndex)), 9) // Ensure currentPage doesn't exceed 10
+  }
 }
 
 // MARK: - Actions
 extension ExploreRecipesViewController {
     @IBAction func pageControlValueChanged(_ sender: UIPageControl) {
-        let targetOffsetX = CGFloat(sender.currentPage) * collectionView.bounds.width
-        
-        // Scroll the collection view to the target content offset without animation
-        collectionView.setContentOffset(CGPoint(x: targetOffsetX, y: 0), animated: true)
-     
+
+        // Log collectionView bounds width
+            print("CollectionView Width:", collectionView.bounds.width)
+            
+            // Log sender currentPage value
+            print("Current Page:", sender.currentPage)
+            
+            // Calculate the target offset X based on the currentPage
+            let targetOffsetX = CGFloat(sender.currentPage) * collectionView.bounds.width
+            
+            // Log the target offset X
+            print("Target Offset X:", targetOffsetX)
+            
+            // Scroll the collection view to the target content offset without animation
+            collectionView.setContentOffset(CGPoint(x: targetOffsetX, y: 0), animated: true)
     }
 }
 

@@ -10,7 +10,7 @@ import Alamofire
 import MBProgressHUD
 
 class FavoritesViewController: UIViewController, FavoriteRecipeCellDelegate  {
-    
+    weak var coordinator: MainCoordinator?
     private let tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -199,12 +199,13 @@ extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func didTapReadMore(for recipe: Recipe) {
         // Instantiating RecipeDetailsViewController
-        let recipeDetailsVC = RecipeDetailsViewController()
-        recipeDetailsVC.recipe = recipe
+     //   let recipeDetailsVC = RecipeDetailsViewController()
+    //    recipeDetailsVC.recipe = recipe
         
+        // Presenting the RecipeDetailsViewController modally
+     //      present(recipeDetailsVC, animated: true, completion: nil)
         
-        
-        navigationController?.pushViewController(recipeDetailsVC, animated: true)
+        coordinator?.showRecipeDetails(for: recipe, controller: self)
         
     }
     

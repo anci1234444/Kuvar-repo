@@ -21,6 +21,7 @@ struct Recipe: Codable, Equatable {
     let mealType: [String]?
     let dishType:[String]?
     let dietLabels:[String]?
+   
     
     
     enum CodingKeys: String, CodingKey {
@@ -35,6 +36,7 @@ struct Recipe: Codable, Equatable {
         case mealType
         case dishType
         case dietLabels
+       
     }
 }
 

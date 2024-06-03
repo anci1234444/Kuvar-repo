@@ -10,6 +10,8 @@ class MainCoordinator: BaseCoordinator {
     
     private let window: UIWindow
     private let mainNavigationController = UINavigationController()
+    private let navigController = UINavigationController()
+    
     
     init(window: UIWindow) {
         self.window = window
@@ -31,12 +33,23 @@ class MainCoordinator: BaseCoordinator {
     
     func showMainScreen() {
         let mainViewController = MainViewController()
-     //  navigationController.setViewControllers([mainViewController], animated: false)
-    //  window.rootViewController = navigationController
-      let mainNavigationController = UINavigationController(rootViewController: mainViewController)
-       window.rootViewController = mainNavigationController
+        mainViewController.coordinator = self
+        //  navigationController.setViewControllers([mainViewController], animated: false)
+        //  window.rootViewController = navigationController
+        let mainNavigationController = UINavigationController(rootViewController: mainViewController)
+        window.rootViewController = mainNavigationController
         
         
         
     }
+
+    func showRecipeDetails(for recipe: Recipe, controller: UIViewController) {
+        let recipeDetailsVC = RecipeDetailsViewController()
+       recipeDetailsVC.recipe = recipe
+        //present screen recipe details modally
+        controller.present(recipeDetailsVC, animated: true, completion: nil)
+   
+  
+    }
+
 }

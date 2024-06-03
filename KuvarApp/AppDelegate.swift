@@ -12,13 +12,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    
  
         let favoritesViewController = FavoritesViewController()
             let recipeViewController = RecipeViewController()
-            let exploreViewController = ExploreRecipesViewController()
+           let exploreViewController = ExploreRecipesViewController()
         
             // Embed each view controller in a navigation controller...
-            let favoritesNavigationController = UINavigationController(rootViewController: favoritesViewController)
+           let favoritesNavigationController = UINavigationController(rootViewController: favoritesViewController)
             let recipeNavigationController = UINavigationController(rootViewController: recipeViewController)
             let exploreNavigationController = UINavigationController(rootViewController: exploreViewController)
             // Set up a tab bar controller...
@@ -26,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             tabBarController.viewControllers = [favoritesNavigationController, recipeNavigationController, exploreNavigationController]
             
             // Make the tab bar controller the root view controller.
-            window?.rootViewController = tabBarController
+           window?.rootViewController = tabBarController
             window?.makeKeyAndVisible()
             
             return true
