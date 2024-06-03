@@ -95,9 +95,10 @@ extension RecipeViewController: UICollectionViewDelegate, UICollectionViewDataSo
         let recipeDetailsVC = RecipeDetailsViewController()
         recipeDetailsVC.recipe = recipe
         
-    
+        // Present the RecipeDetailsViewController modally
+           present(recipeDetailsVC, animated: true, completion: nil)
         
-        navigationController?.pushViewController(recipeDetailsVC, animated: true)
+    //    navigationController?.pushViewController(recipeDetailsVC, animated: true)
         
     }
 }

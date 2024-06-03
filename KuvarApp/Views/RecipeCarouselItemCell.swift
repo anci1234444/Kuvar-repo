@@ -18,7 +18,7 @@ class RecipeCarouselItemCell: UICollectionViewCell {
     var imageView: UIImageView!
     var titleLabel: UILabel!
     var ingredientsLabel:UILabel!
-    var scrollView:UIScrollView!
+   var scrollView:UIScrollView!
     var contentContainerView:UIView!
     var favoritesButton: UIButton! // New favorites button...
     
@@ -45,6 +45,11 @@ class RecipeCarouselItemCell: UICollectionViewCell {
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 10
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        // Adding a new tap gesture recognizer to the image view
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(readMoreTapped))
+        imageView.isUserInteractionEnabled = true
+        imageView.addGestureRecognizer(tapGestureRecognizer)
+
         contentView.addSubview(imageView)
         
         
@@ -60,9 +65,9 @@ class RecipeCarouselItemCell: UICollectionViewCell {
         
         
         // Creating a UIScrollView
-        scrollView = UIScrollView()
-        scrollView.translatesAutoresizingMaskIntoConstraints = false
-        contentView.addSubview(scrollView)
+       scrollView = UIScrollView()
+     scrollView.translatesAutoresizingMaskIntoConstraints = false
+      contentView.addSubview(scrollView)
         
         // Creating a container view for the content within the scroll view
         contentContainerView = UIView()
@@ -105,12 +110,12 @@ class RecipeCarouselItemCell: UICollectionViewCell {
         ])
         
         // Constraints for scrollView.
-        NSLayoutConstraint.activate([
-            scrollView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 35),
+      NSLayoutConstraint.activate([
+           scrollView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 35),
             scrollView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            scrollView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            scrollView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
-        ])
+           scrollView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+           scrollView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
+       ])
         
         // Constraints for contentContainerView..
         NSLayoutConstraint.activate([
@@ -124,8 +129,8 @@ class RecipeCarouselItemCell: UICollectionViewCell {
         // Constraints for ingredientsLabel inside contentContainerView..
         NSLayoutConstraint.activate([
             ingredientsLabel.topAnchor.constraint(equalTo: contentContainerView.topAnchor, constant:15),
-            ingredientsLabel.leadingAnchor.constraint(equalTo: contentContainerView.leadingAnchor),
-            ingredientsLabel.trailingAnchor.constraint(equalTo: contentContainerView.trailingAnchor),
+            ingredientsLabel.leadingAnchor.constraint(equalTo: contentContainerView.leadingAnchor, constant: 20),
+            ingredientsLabel.trailingAnchor.constraint(equalTo: contentContainerView.trailingAnchor, constant: -20),
             ingredientsLabel.bottomAnchor.constraint(equalTo: contentContainerView.bottomAnchor)
         ])
         
@@ -180,22 +185,7 @@ class RecipeCarouselItemCell: UICollectionViewCell {
         self.recipe = recipe
         updateFavoriteStatus()
         
-        //creating read more button
-        let readMoreButton = UIButton(type: .custom)
-        readMoreButton.setTitle("Read More", for: .normal)
-        readMoreButton.setTitleColor(.red, for: .normal)
-        readMoreButton.titleLabel?.font = UIFont(name: "Poppins-SemiBold", size: 8)
-        readMoreButton.addTarget(self, action: #selector(readMoreTapped), for: .touchUpInside)
-        readMoreButton.translatesAutoresizingMaskIntoConstraints = false
-        contentView.addSubview(readMoreButton)
-        
-        // setup constraints for the Read More button
-        NSLayoutConstraint.activate([
-            readMoreButton.leadingAnchor.constraint(equalTo: contentContainerView.leadingAnchor, constant:20),
-            readMoreButton.trailingAnchor.constraint(equalTo: contentContainerView.trailingAnchor,constant: -5),
-            readMoreButton.topAnchor.constraint(equalTo:  contentContainerView.topAnchor, constant: 10),
-     
-        ])
+       
     }
     
     // Function to update favorite status and UI

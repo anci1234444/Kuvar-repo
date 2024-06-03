@@ -14,7 +14,9 @@ class ExploreRecipesViewController: UIViewController, UICollectionViewDelegate, 
     func didTapReadMore(for recipe: Recipe) {
         let recipeDetailsVC = RecipeDetailsViewController()
         recipeDetailsVC.recipe = recipe
-        navigationController?.pushViewController(recipeDetailsVC, animated: true)
+     //   navigationController?.pushViewController(recipeDetailsVC, animated: true)
+        // Presenting the RecipeDetailsViewController modally
+           present(recipeDetailsVC, animated: true, completion: nil)
     }
     
     
@@ -99,7 +101,7 @@ class ExploreRecipesViewController: UIViewController, UICollectionViewDelegate, 
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        fetchExploreRecipes()
+    
         print("numberOfPages in viewDidAppear:", pageControl.numberOfPages)
     }
     

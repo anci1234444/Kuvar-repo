@@ -100,6 +100,18 @@ class RecipeDetailsViewController: UIViewController {
         dietLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(dietLabel)
         
+        // Adding a "Close" button
+               let closeButton = UIButton(type: .system)
+               closeButton.setTitle("Close", for: .normal)
+               closeButton.addTarget(self, action: #selector(closeButtonTapped), for: .touchUpInside)
+        closeButton.translatesAutoresizingMaskIntoConstraints = false
+               view.addSubview(closeButton)
+        
+        NSLayoutConstraint.activate([
+                   closeButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
+                   closeButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10)
+               ])
+        
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
             titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
@@ -109,7 +121,7 @@ class RecipeDetailsViewController: UIViewController {
         
         NSLayoutConstraint.activate([
       
-            recipeImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 145),
+            recipeImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 45),
             recipeImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             recipeImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
             totalTimeLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -40),
@@ -222,5 +234,9 @@ class RecipeDetailsViewController: UIViewController {
      
         navigationController?.popViewController(animated: true)
     }
+    // Function to handle close button tap
+       @objc func closeButtonTapped() {
+           dismiss(animated: true, completion: nil)
+       }
 }
 

@@ -6,9 +6,11 @@
 //
 
 import UIKit
-
+protocol MainViewControllerDelegate: AnyObject {
+    func didSelectRecipe(_ recipe: Recipe)
+}
 class MainViewController: UIViewController {
-    
+    weak var delegate: MainViewControllerDelegate?
     var recipeViewController = RecipeViewController()
     var exploreViewController = ExploreRecipesViewController()
     
@@ -51,6 +53,12 @@ class MainViewController: UIViewController {
         
         recipeViewController.didMove(toParent: tabBarController)
       
+    }
+    
+    func recipeSelected(_ recipe: Recipe) {
+        let selectedRecipe = Recipe(from: Decoder as! Decoder)
+               delegate?.didSelectRecipe(selectedRecipe)
+        
     }
 }
 
