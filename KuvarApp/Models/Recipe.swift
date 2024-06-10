@@ -10,8 +10,8 @@ import Alamofire
 import MBProgressHUD
 
 struct Recipe: Codable, Equatable {
-    
-    let imageURL: String
+    var createdFromNewRecipeViewController: Bool = false
+    var imageURL: String
     let label: String
     let totalTime:Int
     let ingredientLines:[String]?

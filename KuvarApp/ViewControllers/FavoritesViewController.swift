@@ -33,15 +33,75 @@ class FavoritesViewController: UIViewController, FavoriteRecipeCellDelegate  {
         button.addTarget(self, action: #selector(uploadButtonTapped), for: .touchUpInside)
         return button
     }()
-    
+    private let noFavoritesView: UIView = {
+           let view = UIView()
+           view.translatesAutoresizingMaskIntoConstraints = false
+           
+           let imageView = UIImageView(image: UIImage(named: "background_02"))
+           imageView.translatesAutoresizingMaskIntoConstraints = false
+           view.addSubview(imageView)
+           
+        let mainLabel = UILabel()
+                mainLabel.text = "Really no favorites?"
+                mainLabel.font = UIFont.boldSystemFont(ofSize: 18) // Bold and bigger text
+                mainLabel.textAlignment = .center
+                mainLabel.translatesAutoresizingMaskIntoConstraints = false
+                view.addSubview(mainLabel)
+                
+                let subLabel = UILabel()
+                subLabel.text = "C'mon, we all have some favorite recipes, right?\nLet's add some together. You can browse some or create your own!"
+                subLabel.numberOfLines = 0
+                subLabel.font = UIFont.systemFont(ofSize: 14) // Regular text
+                subLabel.textAlignment = .center
+                subLabel.translatesAutoresizingMaskIntoConstraints = false
+                view.addSubview(subLabel)
+           
+           let button = UIButton(type: .system)
+           button.setTitle("Browse Recipes", for: .normal)
+           button.translatesAutoresizingMaskIntoConstraints = false
+           button.backgroundColor = .red
+           button.setTitleColor(.white, for: .normal)
+           button.layer.cornerRadius = 5
+           button.layer.shadowColor = UIColor.black.cgColor
+           button.layer.shadowOffset = CGSize(width: 0, height: 2)
+           button.layer.shadowOpacity = 1
+           button.layer.shadowRadius = 4
+        button.addTarget(self, action: #selector(browseRecipesButtonTapped), for: .touchUpInside)
+           
+           view.addSubview(button)
+           
+           NSLayoutConstraint.activate([
+               imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+               imageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 80),
+               imageView.widthAnchor.constraint(equalToConstant: 200),
+               imageView.heightAnchor.constraint(equalToConstant: 200),
+               
+               mainLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 20),
+                mainLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+                mainLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+                          
+                subLabel.topAnchor.constraint(equalTo: mainLabel.bottomAnchor, constant: 8),
+                subLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+                subLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+                          
+                button.topAnchor.constraint(equalTo: subLabel.bottomAnchor, constant: 20),
+                button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                button.widthAnchor.constraint(equalToConstant: 150),
+                button.heightAnchor.constraint(equalToConstant: 50)
+           ])
+           
+           return view
+       }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
         loadFavoriteRecipes()
-        
+        NotificationCenter.default.addObserver(self, selector: #selector(favoriteRecipesUpdated), name: Notification.Name("FavoriteRecipesUpdated"), object: nil)
+  //      NotificationCenter.default.addObserver(self, selector: #selector(loadFavoriteRecipes), name: Notification.Name("FavoriteRecipesUpdated"), object: nil)
         view.addSubview(headingImageView)
-        view.addSubview(uploadButton)
+        view.addSubview(noFavoritesView)
+        view.addSubview(uploadButton) 
         
         // Setup constraints for the image view
         NSLayoutConstraint.activate([
@@ -60,14 +120,90 @@ class FavoritesViewController: UIViewController, FavoriteRecipeCellDelegate  {
             uploadButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20)
         ])
         
+        NSLayoutConstraint.activate([
+            noFavoritesView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                      noFavoritesView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+                      noFavoritesView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -40),
+                      noFavoritesView.heightAnchor.constraint(equalTo: view.heightAnchor, constant: -200)
+                  ])
+        
+        
         
         uploadButton.layer.zPosition = view.layer.zPosition + 1
+        noFavoritesView.isHidden = true
     }
-    @objc private func uploadButtonTapped() {
+    @objc private func browseRecipesButtonTapped() {
+        // Method to handle the "Browse Recipes" button tap
+              let recipeVC = RecipeViewController()
+              navigationController?.pushViewController(recipeVC, animated: true)
+          
+    }
+    @objc private func favoriteRecipesUpdated() {
+        loadFavoriteRecipes()
+    }
+ /*   @objc private func uploadButtonTapped() {
         // only print statement for now...
         print("Upload button tapped")
-    }
+      let newViewController = NewRecipeViewController()
+     //        newViewController.onRecipeCreated = { [weak self] newRecipe in
+        newViewController.onRecipeCreated = { [weak self] (newRecipe: Recipe, imageData: Data) in
+            guard let self = self else { return }
+            self.favoriteRecipes.append(newRecipe)
+            self.saveFavoriteRecipesToUserDefaults()
+            // Convert imageData to UIImage
+            guard let image = UIImage(data: imageData) else {
+                print("Failed to convert imageData to UIImage")
+                return
+            }
+
+            // Call the method with the converted UIImage
+            newViewController.saveImageDataToDocumentsDirectory(image: image)
+            self.tableView.reloadData()
+            self.noFavoritesView.isHidden = true
+                   
+              }
+               present(newViewController, animated: true, completion: nil)
+        
+     
+    } */
     
+    @objc private func uploadButtonTapped() {
+        print("Upload button tapped")
+        let newViewController = NewRecipeViewController()
+        newViewController.onRecipeCreated = { [weak self] newRecipe, imageData in
+            guard let self = self else { return }
+            self.favoriteRecipes.append(newRecipe)
+            self.saveFavoriteRecipesToUserDefaults()
+            
+            // Save the image data
+            self.saveImageData(imageData)
+            
+            self.tableView.reloadData()
+            self.noFavoritesView.isHidden = true
+        }
+        present(newViewController, animated: true, completion: nil)
+    }
+
+    private func saveImageData(_ imageData: Data) {
+        // Get the documents directory URL
+        guard let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
+            print("Error: Could not access the documents directory")
+            return
+        }
+
+        // Generate a unique file name for the image
+        let imageFileName = UUID().uuidString + ".jpeg"
+        let imageURL = documentsDirectory.appendingPathComponent(imageFileName)
+
+        // Write the image data to the file
+        do {
+            try imageData.write(to: imageURL)
+            print("Image saved to documents directory: \(imageURL)")
+        } catch {
+            print("Error saving image to documents directory: \(error)")
+        }
+    }
+
     private func setupTableView() {
         tableView.register(FavoriteRecipeTableViewCell.self, forCellReuseIdentifier: "FavoriteRecipeTableViewCell")
         tableView.delegate = self
@@ -101,11 +237,12 @@ class FavoritesViewController: UIViewController, FavoriteRecipeCellDelegate  {
         super.viewWillAppear(animated)
         loadFavoriteRecipes() // Reload data when the view appears
     }
-    public func loadFavoriteRecipes() {
+   @objc public func loadFavoriteRecipes() {
         guard let favoriteRecipesData = UserDefaults.standard.array(forKey: favoritesKey) as? [Data] else {
             print("No favorite recipes found in UserDefaults")
             return
         }
+      
         
         favoriteRecipes = favoriteRecipesData.compactMap { data in
             do {
@@ -116,11 +253,24 @@ class FavoritesViewController: UIViewController, FavoriteRecipeCellDelegate  {
             }
         }
         
+        if favoriteRecipes.isEmpty {
+                   displayNoFavoritesView()
+               } else {
+                   noFavoritesView.isHidden = true
+               }
+        
         tableView.reloadData()
         tableView.refreshControl?.endRefreshing() // end refreshing
+        
+   
+           
     }
     
-    
+
+    private func displayNoFavoritesView() {
+         noFavoritesView.isHidden = false
+     }
+
 }
 
 extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
@@ -131,6 +281,9 @@ extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FavoriteRecipeTableViewCell", for: indexPath) as! FavoriteRecipeTableViewCell
         let recipe = favoriteRecipes[indexPath.row]
+        
+        // Debugging log to print out the recipe being displayed
+          print("Displaying recipe: \(recipe)")
         cell.configure(with: recipe)
         cell.delegate = self
         
@@ -194,16 +347,11 @@ extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
         NotificationCenter.default.post(name: Notification.Name("FavoriteRecipesUpdated"), object: nil)
     }
     
-    // MARK: - FavoriteRecipeCellDelegate
+  
     
     
     func didTapReadMore(for recipe: Recipe) {
-        // Instantiating RecipeDetailsViewController
-     //   let recipeDetailsVC = RecipeDetailsViewController()
-    //    recipeDetailsVC.recipe = recipe
-        
-        // Presenting the RecipeDetailsViewController modally
-     //      present(recipeDetailsVC, animated: true, completion: nil)
+    
         
         coordinator?.showRecipeDetails(for: recipe, controller: self)
         

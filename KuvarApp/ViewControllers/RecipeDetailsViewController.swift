@@ -44,7 +44,6 @@ class RecipeDetailsViewController: UIViewController {
     }
         
     
-    
     private func setupUI() {
         
         
@@ -116,11 +115,7 @@ class RecipeDetailsViewController: UIViewController {
         dietLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(dietLabel)
         
-        
-        
-        
-        
-        
+ 
         // Adding a "Close" button
         let closeButton = UIButton(type: .system)
         closeButton.setTitle("Close", for: .normal)
@@ -339,6 +334,5 @@ class RecipeDetailsViewController: UIViewController {
         favoriteButton.setImage(UIImage(named: favoriteImageName)?.withRenderingMode(.alwaysTemplate), for: .normal)
     }
     
-
 }
 

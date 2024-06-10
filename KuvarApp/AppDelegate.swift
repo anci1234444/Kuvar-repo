@@ -15,8 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
  
         let favoritesViewController = FavoritesViewController()
-            let recipeViewController = RecipeViewController()
-           let exploreViewController = ExploreRecipesViewController()
+        let recipeViewController = RecipeViewController()
+        let exploreViewController = ExploreRecipesViewController()
         
             // Embed each view controller in a navigation controller...
            let favoritesNavigationController = UINavigationController(rootViewController: favoritesViewController)

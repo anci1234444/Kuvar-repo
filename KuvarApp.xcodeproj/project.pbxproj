@@ -25,6 +25,9 @@
 		4597E05B2BEDC127000D2931 /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4597E0562BEDC01B000D2931 /* Poppins-Black.ttf */; };
 		4597E05C2BEDC31C000D2931 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4597E0532BEDC01B000D2931 /* Poppins-Regular.ttf */; };
 		4597E05D2BEDC372000D2931 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4597E0582BEDC01B000D2931 /* Poppins-SemiBold.ttf */; };
+		459C855E2C0F29A900D0EA80 /* NewRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459C855D2C0F29A900D0EA80 /* NewRecipeViewController.swift */; };
+		459C85602C0F35C500D0EA80 /* NewRecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459C855F2C0F35C400D0EA80 /* NewRecipeView.swift */; };
+		459C85622C0F38EC00D0EA80 /* NewRecipeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 459C85612C0F38EC00D0EA80 /* NewRecipeViewController.xib */; };
 		459C9DDA2BEA868800AB190E /* RecipeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459C9DD82BEA868800AB190E /* RecipeCollectionViewCell.swift */; };
 		459C9DDB2BEA868800AB190E /* RecipeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 459C9DD92BEA868800AB190E /* RecipeCollectionViewCell.xib */; };
 		459C9DDE2BEB118400AB190E /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 459C9DDD2BEB118400AB190E /* AlamofireImage */; };
@@ -103,6 +106,9 @@
 		4597E0582BEDC01B000D2931 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		4597E0592BEDC01B000D2931 /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Italic.ttf"; sourceTree = "<group>"; };
 		4597E05A2BEDC01B000D2931 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
+		459C855D2C0F29A900D0EA80 /* NewRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRecipeViewController.swift; sourceTree = "<group>"; };
+		459C855F2C0F35C400D0EA80 /* NewRecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRecipeView.swift; sourceTree = "<group>"; };
+		459C85612C0F38EC00D0EA80 /* NewRecipeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewRecipeViewController.xib; sourceTree = "<group>"; };
 		459C9DD82BEA868800AB190E /* RecipeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCollectionViewCell.swift; sourceTree = "<group>"; };
 		459C9DD92BEA868800AB190E /* RecipeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeCollectionViewCell.xib; sourceTree = "<group>"; };
 		459EE50C2BFD70920062D315 /* ExploreRecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreRecipesViewController.swift; sourceTree = "<group>"; };
@@ -216,6 +222,7 @@
 				45AF79B32BDBBBF0003DE1F9 /* RecipeViewController.swift */,
 				459EE50C2BFD70920062D315 /* ExploreRecipesViewController.swift */,
 				4597BEB12C063A2E00340D89 /* RecipeDetailsViewController.swift */,
+				459C855D2C0F29A900D0EA80 /* NewRecipeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -245,6 +252,8 @@
 				4597BEA72BFE1BB000340D89 /* RecipeCarouselItemCell.swift */,
 				4597BEAB2BFE203800340D89 /* RecipeCarouselItemCell.xib */,
 				4597BEB32C06820F00340D89 /* RecipeDetailsViewController.xib */,
+				459C855F2C0F35C400D0EA80 /* NewRecipeView.swift */,
+				459C85612C0F38EC00D0EA80 /* NewRecipeViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -432,6 +441,7 @@
 				459C9DDB2BEA868800AB190E /* RecipeCollectionViewCell.xib in Resources */,
 				45C726C12BD7FE7C00B432D2 /* SplashScreenViewController.xib in Resources */,
 				45AF79B62BDBBDFA003DE1F9 /* RecipeViewController.xib in Resources */,
+				459C85622C0F38EC00D0EA80 /* NewRecipeViewController.xib in Resources */,
 				453A3DD92BD69AD400159D2F /* MainViewController.xib in Resources */,
 				45BB77A22BF4DBCF005ED9B0 /* FavoritesViewController.xib in Resources */,
 				453A3DA82BD6851B00159D2F /* Assets.xcassets in Resources */,
@@ -467,8 +477,10 @@
 				453A3D9F2BD6851A00159D2F /* AppDelegate.swift in Sources */,
 				45C556802BDB8B7C0097C517 /* RecipeAPIClient.swift in Sources */,
 				45C828B92BE121030041BA9D /* RecipeUseCase.swift in Sources */,
+				459C855E2C0F29A900D0EA80 /* NewRecipeViewController.swift in Sources */,
 				45C726BF2BD7EF0100B432D2 /* SplashScreenViewController.swift in Sources */,
 				459C9DDA2BEA868800AB190E /* RecipeCollectionViewCell.swift in Sources */,
+				459C85602C0F35C500D0EA80 /* NewRecipeView.swift in Sources */,
 				4597BEA82BFE1BB000340D89 /* RecipeCarouselItemCell.swift in Sources */,
 				453A3DA12BD6851A00159D2F /* SceneDelegate.swift in Sources */,
 				45C726BD2BD7985700B432D2 /* MainCoordinator.swift in Sources */,
