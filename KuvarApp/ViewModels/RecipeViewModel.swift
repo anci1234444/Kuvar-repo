@@ -15,13 +15,21 @@ class RecipeViewModel {
     
     var recipes: [Recipe] = []
     
-    func fetchRecipes(query: String, completion: @escaping (Error?) -> Void) {
+    func fetchExploreRecipes(completion: @escaping (Error?) -> Void) {
+     
+        let query = "explore"
+        
+        // calling a method from RecipeUseCase that will retrieve the desired recipes
         recipeUseCase.fetchRecipes(query: query) { [weak self] result in
             switch result {
             case .success(let recipes):
-                self?.recipes = recipes
+                // save first 10 recipes
+                self?.recipes = Array(recipes.prefix(10))
+               // self?.recipes = recipes
+           //     print("Fetched recipes successfully:", self?.recipes)
                 completion(nil)
             case .failure(let error):
+           //     print("Failed to fetch recipes:", error)
                 completion(error)
             }
         }

@@ -17,12 +17,19 @@
 		453A3DC22BD6851B00159D2F /* KuvarAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A3DC12BD6851B00159D2F /* KuvarAppUITestsLaunchTests.swift */; };
 		453A3DD92BD69AD400159D2F /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 453A3DD82BD69AD400159D2F /* MainViewController.xib */; };
 		453A3DDC2BD69EA400159D2F /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A3DD22BD68E9100159D2F /* BaseCoordinator.swift */; };
+		4597BEA62BFE1ADB00340D89 /* ExploreRecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597BEA52BFE1ADB00340D89 /* ExploreRecipesView.swift */; };
+		4597BEA82BFE1BB000340D89 /* RecipeCarouselItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597BEA72BFE1BB000340D89 /* RecipeCarouselItemCell.swift */; };
+		4597BEAC2BFE203800340D89 /* RecipeCarouselItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4597BEAB2BFE203800340D89 /* RecipeCarouselItemCell.xib */; };
+		4597BEB22C063A2E00340D89 /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597BEB12C063A2E00340D89 /* RecipeDetailsViewController.swift */; };
+		4597BEB42C06820F00340D89 /* RecipeDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4597BEB32C06820F00340D89 /* RecipeDetailsViewController.xib */; };
 		4597E05B2BEDC127000D2931 /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4597E0562BEDC01B000D2931 /* Poppins-Black.ttf */; };
 		4597E05C2BEDC31C000D2931 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4597E0532BEDC01B000D2931 /* Poppins-Regular.ttf */; };
 		4597E05D2BEDC372000D2931 /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4597E0582BEDC01B000D2931 /* Poppins-SemiBold.ttf */; };
 		459C9DDA2BEA868800AB190E /* RecipeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459C9DD82BEA868800AB190E /* RecipeCollectionViewCell.swift */; };
 		459C9DDB2BEA868800AB190E /* RecipeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 459C9DD92BEA868800AB190E /* RecipeCollectionViewCell.xib */; };
 		459C9DDE2BEB118400AB190E /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 459C9DDD2BEB118400AB190E /* AlamofireImage */; };
+		459EE50D2BFD70920062D315 /* ExploreRecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 459EE50C2BFD70920062D315 /* ExploreRecipesViewController.swift */; };
+		459EE5112BFD7AB50062D315 /* ExploreRecipesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 459EE5102BFD7AB50062D315 /* ExploreRecipesViewController.xib */; };
 		45AF79B02BDBA7BC003DE1F9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 45AF79AF2BDBA7BC003DE1F9 /* Alamofire */; };
 		45AF79B22BDBB742003DE1F9 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AF79B12BDBB742003DE1F9 /* Recipe.swift */; };
 		45AF79B42BDBBBF0003DE1F9 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45AF79B32BDBBBF0003DE1F9 /* RecipeViewController.swift */; };
@@ -72,6 +79,11 @@
 		453A3DC12BD6851B00159D2F /* KuvarAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KuvarAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		453A3DD22BD68E9100159D2F /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		453A3DD82BD69AD400159D2F /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		4597BEA52BFE1ADB00340D89 /* ExploreRecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreRecipesView.swift; sourceTree = "<group>"; };
+		4597BEA72BFE1BB000340D89 /* RecipeCarouselItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCarouselItemCell.swift; sourceTree = "<group>"; };
+		4597BEAB2BFE203800340D89 /* RecipeCarouselItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeCarouselItemCell.xib; sourceTree = "<group>"; };
+		4597BEB12C063A2E00340D89 /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
+		4597BEB32C06820F00340D89 /* RecipeDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeDetailsViewController.xib; sourceTree = "<group>"; };
 		4597E0482BEDC01B000D2931 /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
 		4597E0492BEDC01B000D2931 /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ThinItalic.ttf"; sourceTree = "<group>"; };
 		4597E04A2BEDC01B000D2931 /* Poppins-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
@@ -93,6 +105,8 @@
 		4597E05A2BEDC01B000D2931 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
 		459C9DD82BEA868800AB190E /* RecipeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCollectionViewCell.swift; sourceTree = "<group>"; };
 		459C9DD92BEA868800AB190E /* RecipeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeCollectionViewCell.xib; sourceTree = "<group>"; };
+		459EE50C2BFD70920062D315 /* ExploreRecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreRecipesViewController.swift; sourceTree = "<group>"; };
+		459EE5102BFD7AB50062D315 /* ExploreRecipesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExploreRecipesViewController.xib; sourceTree = "<group>"; };
 		45AF79B12BDBB742003DE1F9 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		45AF79B32BDBBBF0003DE1F9 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
 		45AF79B52BDBBDFA003DE1F9 /* RecipeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeViewController.xib; sourceTree = "<group>"; };
@@ -200,6 +214,8 @@
 				453A3DA22BD6851A00159D2F /* MainViewController.swift */,
 				45BB779F2BF4DB72005ED9B0 /* FavoritesViewController.swift */,
 				45AF79B32BDBBBF0003DE1F9 /* RecipeViewController.swift */,
+				459EE50C2BFD70920062D315 /* ExploreRecipesViewController.swift */,
+				4597BEB12C063A2E00340D89 /* RecipeDetailsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -224,6 +240,11 @@
 				459C9DD92BEA868800AB190E /* RecipeCollectionViewCell.xib */,
 				45BB77A12BF4DBCF005ED9B0 /* FavoritesViewController.xib */,
 				45BB77A52BF4E215005ED9B0 /* FavoriteRecipeTableViewCell.xib */,
+				459EE5102BFD7AB50062D315 /* ExploreRecipesViewController.xib */,
+				4597BEA52BFE1ADB00340D89 /* ExploreRecipesView.swift */,
+				4597BEA72BFE1BB000340D89 /* RecipeCarouselItemCell.swift */,
+				4597BEAB2BFE203800340D89 /* RecipeCarouselItemCell.xib */,
+				4597BEB32C06820F00340D89 /* RecipeDetailsViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -400,7 +421,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				459EE5112BFD7AB50062D315 /* ExploreRecipesViewController.xib in Resources */,
 				45BB77A72BF4E215005ED9B0 /* FavoriteRecipeTableViewCell.xib in Resources */,
+				4597BEAC2BFE203800340D89 /* RecipeCarouselItemCell.xib in Resources */,
+				4597BEB42C06820F00340D89 /* RecipeDetailsViewController.xib in Resources */,
 				4597E05D2BEDC372000D2931 /* Poppins-SemiBold.ttf in Resources */,
 				4597E05C2BEDC31C000D2931 /* Poppins-Regular.ttf in Resources */,
 				4597E05B2BEDC127000D2931 /* Poppins-Black.ttf in Resources */,
@@ -435,13 +459,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4597BEA62BFE1ADB00340D89 /* ExploreRecipesView.swift in Sources */,
+				4597BEB22C063A2E00340D89 /* RecipeDetailsViewController.swift in Sources */,
 				45BB77A02BF4DB72005ED9B0 /* FavoritesViewController.swift in Sources */,
 				453A3DA32BD6851A00159D2F /* MainViewController.swift in Sources */,
+				459EE50D2BFD70920062D315 /* ExploreRecipesViewController.swift in Sources */,
 				453A3D9F2BD6851A00159D2F /* AppDelegate.swift in Sources */,
 				45C556802BDB8B7C0097C517 /* RecipeAPIClient.swift in Sources */,
 				45C828B92BE121030041BA9D /* RecipeUseCase.swift in Sources */,
 				45C726BF2BD7EF0100B432D2 /* SplashScreenViewController.swift in Sources */,
 				459C9DDA2BEA868800AB190E /* RecipeCollectionViewCell.swift in Sources */,
+				4597BEA82BFE1BB000340D89 /* RecipeCarouselItemCell.swift in Sources */,
 				453A3DA12BD6851A00159D2F /* SceneDelegate.swift in Sources */,
 				45C726BD2BD7985700B432D2 /* MainCoordinator.swift in Sources */,
 				45BB77A62BF4E215005ED9B0 /* FavoriteRecipeTableViewCell.swift in Sources */,

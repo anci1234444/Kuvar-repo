@@ -2,10 +2,15 @@ import UIKit
 import Alamofire
 import MBProgressHUD
 
-class RecipeViewController: UIViewController {
+class RecipeViewController: UIViewController, RecipeCellDelegate {
+    func didTapReadMore(for recipe: Recipe) {
+        coordinator?.showRecipeDetails(for: recipe, controller: self)
+    }
+    
+    
     
     @IBOutlet weak var collectionView: UICollectionView!
-    
+    weak var coordinator: MainCoordinator?
     
     
     var viewModel = RecipeViewModel()
@@ -44,15 +49,17 @@ class RecipeViewController: UIViewController {
         collectionView.register(cellNib, forCellWithReuseIdentifier: "RecipeCollectionViewCell")
         
         
-        viewModel.fetchRecipes(query: "Meal") { [weak self] error in
+        viewModel.fetchExploreRecipes { error in
             if let error = error {
                 print("Failed to fetch recipes: \(error.localizedDescription)")
             } else {
                 DispatchQueue.main.async {
-                    self?.collectionView.reloadData()
+                    // Reload your collection view here
+                    self.collectionView.reloadData()
                 }
             }
         }
+        
         
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -60,6 +67,7 @@ class RecipeViewController: UIViewController {
         // adding an observer for favorite recipes updated notification.
         NotificationCenter.default.addObserver(self, selector: #selector(handleFavoriteRecipesUpdated), name: Notification.Name("FavoriteRecipesUpdated"), object: nil)
     }
+    
     @objc private func handleFavoriteRecipesUpdated() {
         // reloading collection view
         collectionView.reloadData()
@@ -83,8 +91,20 @@ extension RecipeViewController: UICollectionViewDelegate, UICollectionViewDataSo
         
         let recipe = viewModel.recipes[indexPath.item]
         cell.configure(with: recipe)
-        
+      cell.delegate = self
         return cell
+    }
+    
+    func didTapReadMore(for recipe: Recipe, navigationController: UINavigationController?) {
+        // Instantiating RecipeDetailsViewController
+      //  let recipeDetailsVC = RecipeDetailsViewController()
+      //  recipeDetailsVC.recipe = recipe
+        
+        // Present the RecipeDetailsViewController modally
+      //     present(recipeDetailsVC, animated: true, completion: nil)
+        
+        coordinator?.showRecipeDetails(for: recipe, controller: self)
+        
     }
 }
 

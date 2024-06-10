@@ -9,8 +9,8 @@ import UIKit
 import Alamofire
 import MBProgressHUD
 
-class FavoritesViewController: UIViewController {
-    
+class FavoritesViewController: UIViewController, FavoriteRecipeCellDelegate  {
+    weak var coordinator: MainCoordinator?
     private let tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -132,6 +132,7 @@ extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FavoriteRecipeTableViewCell", for: indexPath) as! FavoriteRecipeTableViewCell
         let recipe = favoriteRecipes[indexPath.row]
         cell.configure(with: recipe)
+        cell.delegate = self
         
         
         return cell
@@ -163,7 +164,7 @@ extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         // creating a custom view for the section footer to add space between cells
         let footerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 10))
-        footerView.backgroundColor = .clear 
+        footerView.backgroundColor = .clear
         return footerView
     }
     
@@ -193,6 +194,20 @@ extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
         NotificationCenter.default.post(name: Notification.Name("FavoriteRecipesUpdated"), object: nil)
     }
     
+    // MARK: - FavoriteRecipeCellDelegate
+    
+    
+    func didTapReadMore(for recipe: Recipe) {
+        // Instantiating RecipeDetailsViewController
+     //   let recipeDetailsVC = RecipeDetailsViewController()
+    //    recipeDetailsVC.recipe = recipe
+        
+        // Presenting the RecipeDetailsViewController modally
+     //      present(recipeDetailsVC, animated: true, completion: nil)
+        
+        coordinator?.showRecipeDetails(for: recipe, controller: self)
+        
+    }
     
     
 }
