@@ -19,8 +19,8 @@ class FavoritesViewController: UIViewController, FavoriteRecipeCellDelegate  {
     
     var favoriteRecipes: [Recipe] = []
     var createdRecipes: [Recipe] = []
-       let favoriteKey = "favoriteRecipes"
-       let createdKey = "createdRecipes"
+//       let favoritesKey = "coovarFavorites"
+ //      let createdKey = "createdRecipes"
     let headingImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -221,30 +221,34 @@ class FavoritesViewController: UIViewController, FavoriteRecipeCellDelegate  {
     }
    @objc public func loadFavoriteRecipes() {
   
-       if let favoriteData = UserDefaults.standard.data(forKey: favoriteKey),
-              let favorites = try? JSONDecoder().decode([Recipe].self, from: favoriteData) {
-               favoriteRecipes = favorites
-           }
-           
-           if let createdData = UserDefaults.standard.data(forKey: createdKey),
-              let created = try? JSONDecoder().decode([Recipe].self, from: createdData) {
-               createdRecipes = created
-           }
-       tableView.reloadData()
-       tableView.refreshControl?.endRefreshing() // end refreshing
-               
-        if favoriteRecipes.isEmpty && createdRecipes.isEmpty {
-                   displayNoFavoritesView()
-               } else {
-                   noFavoritesView.isHidden = true
+       if let favoriteDataArray = UserDefaults.standard.array(forKey: UserDefaultsKeys.favoritesKey.rawValue) as? [Data] {
+               favoriteRecipes = favoriteDataArray.compactMap { data in
+                   try? JSONDecoder().decode(Recipe.self, from: data)
                }
-       
-   
+           } else {
+               favoriteRecipes = []
+           }
 
-       print("Favorite Recipes: \(favoriteRecipes)")
-       print("Created recipes: \(createdRecipes)")
-      
-     
+       if let createdDataArray = UserDefaults.standard.array(forKey: UserDefaultsKeys.createdKey.rawValue) as? [Data] {
+               createdRecipes = createdDataArray.compactMap { data in
+                   try? JSONDecoder().decode(Recipe.self, from: data)
+               }
+           } else {
+               createdRecipes = []
+           }
+
+           tableView.reloadData()
+           tableView.refreshControl?.endRefreshing() // end refreshing
+
+           if favoriteRecipes.isEmpty && createdRecipes.isEmpty {
+               displayNoFavoritesView()
+           } else {
+               noFavoritesView.isHidden = true
+           }
+
+           print("Favorite Recipes: \(favoriteRecipes)")
+           print("Created Recipes: \(createdRecipes)")
+       
    
            
     }
@@ -359,13 +363,13 @@ extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
         
         // post notification when favorites are updated...
      //   NotificationCenter.default.post(name: Notification.Name("FavoriteRecipesUpdated"), object: nil)
-        if let favoriteData = try? JSONEncoder().encode(favoriteRecipes) {
-                  UserDefaults.standard.set(favoriteData, forKey: favoriteKey)
-              }
-              
-              if let createdData = try? JSONEncoder().encode(createdRecipes) {
-                  UserDefaults.standard.set(createdData, forKey: createdKey)
-              }
+       
+            let favoriteData = favoriteRecipes.compactMap { try? JSONEncoder().encode($0) }
+        UserDefaults.standard.set(favoriteData, forKey: UserDefaultsKeys.favoritesKey.rawValue)
+
+            let createdData = createdRecipes.compactMap { try? JSONEncoder().encode($0) }
+        UserDefaults.standard.set(createdData, forKey: UserDefaultsKeys.createdKey.rawValue)
+        
         NotificationCenter.default.post(name: Notification.Name("FavoriteRecipesUpdated"), object: nil)
     }
     

@@ -17,6 +17,7 @@
 		453A3DC22BD6851B00159D2F /* KuvarAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A3DC12BD6851B00159D2F /* KuvarAppUITestsLaunchTests.swift */; };
 		453A3DD92BD69AD400159D2F /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 453A3DD82BD69AD400159D2F /* MainViewController.xib */; };
 		453A3DDC2BD69EA400159D2F /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A3DD22BD68E9100159D2F /* BaseCoordinator.swift */; };
+		45764BDA2C19B54B0089EC82 /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45764BD92C19B54B0089EC82 /* UserDefaultsKeys.swift */; };
 		4597BEA62BFE1ADB00340D89 /* ExploreRecipesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597BEA52BFE1ADB00340D89 /* ExploreRecipesView.swift */; };
 		4597BEA82BFE1BB000340D89 /* RecipeCarouselItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4597BEA72BFE1BB000340D89 /* RecipeCarouselItemCell.swift */; };
 		4597BEAC2BFE203800340D89 /* RecipeCarouselItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4597BEAB2BFE203800340D89 /* RecipeCarouselItemCell.xib */; };
@@ -82,6 +83,7 @@
 		453A3DC12BD6851B00159D2F /* KuvarAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KuvarAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		453A3DD22BD68E9100159D2F /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		453A3DD82BD69AD400159D2F /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		45764BD92C19B54B0089EC82 /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
 		4597BEA52BFE1ADB00340D89 /* ExploreRecipesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreRecipesView.swift; sourceTree = "<group>"; };
 		4597BEA72BFE1BB000340D89 /* RecipeCarouselItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCarouselItemCell.swift; sourceTree = "<group>"; };
 		4597BEAB2BFE203800340D89 /* RecipeCarouselItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeCarouselItemCell.xib; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 		453A3D9D2BD6851A00159D2F /* KuvarApp */ = {
 			isa = PBXGroup;
 			children = (
+				45764BD82C19B5370089EC82 /* UserDefaultKeys */,
 				45C828B22BE110760041BA9D /* Models */,
 				453A3DDA2BD69E1500159D2F /* ViewControllers */,
 				4557475C2BD9170D009607EE /* Views */,
@@ -256,6 +259,14 @@
 				459C85612C0F38EC00D0EA80 /* NewRecipeViewController.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		45764BD82C19B5370089EC82 /* UserDefaultKeys */ = {
+			isa = PBXGroup;
+			children = (
+				45764BD92C19B54B0089EC82 /* UserDefaultsKeys.swift */,
+			);
+			path = UserDefaultKeys;
 			sourceTree = "<group>";
 		};
 		4597E0472BEDC01B000D2931 /* Poppins */ = {
@@ -474,6 +485,7 @@
 				45BB77A02BF4DB72005ED9B0 /* FavoritesViewController.swift in Sources */,
 				453A3DA32BD6851A00159D2F /* MainViewController.swift in Sources */,
 				459EE50D2BFD70920062D315 /* ExploreRecipesViewController.swift in Sources */,
+				45764BDA2C19B54B0089EC82 /* UserDefaultsKeys.swift in Sources */,
 				453A3D9F2BD6851A00159D2F /* AppDelegate.swift in Sources */,
 				45C556802BDB8B7C0097C517 /* RecipeAPIClient.swift in Sources */,
 				45C828B92BE121030041BA9D /* RecipeUseCase.swift in Sources */,
