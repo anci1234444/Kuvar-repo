@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewRecipeViewController" customModule="KuvarApp" customModuleProvider="target">
+            <connections>
+                <outlet property="btnVis" destination="rUD-ow-Laq" id="ci4-S6-4Sb"/>
+                <outlet property="createButton" destination="Car-gl-YbU" id="h7G-Wk-kBH"/>
+                <outlet property="view" destination="iN0-l3-epB" id="gY3-Zg-THD"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUD-ow-Laq">
+                    <rect key="frame" x="168" y="234" width="103" height="28"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="tintColor" systemColor="labelColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Visualise it!">
+                        <fontDescription key="titleFontDescription" type="system" pointSize="12"/>
+                        <color key="baseForegroundColor" systemColor="labelColor"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="btnVisualize:" destination="-1" eventType="touchUpInside" id="CCN-St-7Af"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Car-gl-YbU">
+                    <rect key="frame" x="16" y="603" width="157" height="35"/>
+                    <color key="backgroundColor" systemColor="systemRedColor"/>
+                    <color key="tintColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="All Good? Create!"/>
+                    <connections>
+                        <action selector="createButtonTapped:" destination="-1" eventType="touchUpInside" id="SBd-PE-ful"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="rUD-ow-Laq" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="175" id="0qV-Zd-y4U"/>
+                <constraint firstItem="rUD-ow-Laq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="168" id="DGa-sh-6W7"/>
+                <constraint firstItem="Car-gl-YbU" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Ig1-s2-acN"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Car-gl-YbU" secondAttribute="trailing" constant="220" id="RwT-dw-Cas"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Car-gl-YbU" secondAttribute="bottom" constant="180" id="Zyh-0K-STu"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rUD-ow-Laq" secondAttribute="trailing" constant="122" id="iUA-pS-a8g"/>
+            </constraints>
+            <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
