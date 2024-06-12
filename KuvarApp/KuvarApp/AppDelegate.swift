@@ -9,20 +9,30 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
-  //  var window: UIWindow?
+    var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-   //     window = UIWindow(frame: UIScreen.main.bounds)
-   //     let navigationController = UINavigationController()
-    //    window?.rootViewController = navigationController
-     //   window?.makeKeyAndVisible()
-        
-   //     let mainCoordinator = MainCoordinator(navigationController: navigationController)
-   //     mainCoordinator.start()
-        
-        return true
-    }
     
+ 
+        let favoritesViewController = FavoritesViewController()
+        let recipeViewController = RecipeViewController()
+        let exploreViewController = ExploreRecipesViewController()
+        
+            // Embed each view controller in a navigation controller...
+           let favoritesNavigationController = UINavigationController(rootViewController: favoritesViewController)
+            let recipeNavigationController = UINavigationController(rootViewController: recipeViewController)
+            let exploreNavigationController = UINavigationController(rootViewController: exploreViewController)
+            // Set up a tab bar controller...
+            let tabBarController = UITabBarController()
+            tabBarController.viewControllers = [favoritesNavigationController, recipeNavigationController, exploreNavigationController]
+            
+            // Make the tab bar controller the root view controller.
+           window?.rootViewController = tabBarController
+            window?.makeKeyAndVisible()
+            
+            return true
+        
+    }
     
     // MARK: UISceneSession Lifecycle
     
@@ -43,3 +53,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
 }
+
