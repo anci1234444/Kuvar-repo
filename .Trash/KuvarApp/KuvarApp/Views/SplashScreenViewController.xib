@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SplashScreenViewController" customModule="KuvarApp" customModuleProvider="target">
+            <connections>
+                <outlet property="loadingImage" destination="eah-SH-cNi" id="NpV-Ft-dtS"/>
+                <outlet property="logoImage" destination="x4M-Sb-hcm" id="L1L-uo-2dG"/>
+                <outlet property="proImage" destination="8w0-w0-Ylt" id="Nm4-Z5-ue7"/>
+                <outlet property="splashImage" destination="d2l-tX-OcO" id="Uj2-d5-TJJ"/>
+                <outlet property="view" destination="iN0-l3-epB" id="i0H-J3-53y"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash image" translatesAutoresizingMaskIntoConstraints="NO" id="d2l-tX-OcO">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Loading indicatior" translatesAutoresizingMaskIntoConstraints="NO" id="eah-SH-cNi">
+                    <rect key="frame" x="143" y="715" width="106" height="70"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="x4M-Sb-hcm">
+                    <rect key="frame" x="76" y="114" width="240" height="57"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Pro" translatesAutoresizingMaskIntoConstraints="NO" id="8w0-w0-Ylt">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="59"/>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="8w0-w0-Ylt" secondAttribute="trailing" id="4nv-lp-eMC"/>
+                <constraint firstItem="8w0-w0-Ylt" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="AM8-SB-ga2"/>
+                <constraint firstItem="d2l-tX-OcO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ENR-KB-Ef5"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="eah-SH-cNi" secondAttribute="trailing" constant="144" id="L30-6j-6wl"/>
+                <constraint firstItem="8w0-w0-Ylt" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Qop-Qj-cER"/>
+                <constraint firstItem="x4M-Sb-hcm" firstAttribute="top" secondItem="8w0-w0-Ylt" secondAttribute="bottom" constant="55" id="WRd-uN-Rfj"/>
+                <constraint firstItem="eah-SH-cNi" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="143" id="anB-bo-pOS"/>
+                <constraint firstAttribute="bottom" secondItem="d2l-tX-OcO" secondAttribute="bottom" id="buw-eT-HPd"/>
+                <constraint firstItem="x4M-Sb-hcm" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="76" id="kyL-1p-iQ6"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="eah-SH-cNi" secondAttribute="bottom" constant="33" id="lHE-N1-ZBj"/>
+                <constraint firstItem="d2l-tX-OcO" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="p58-r8-GSY"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="x4M-Sb-hcm" secondAttribute="trailing" constant="77" id="uSL-Y3-xQ9"/>
+                <constraint firstItem="d2l-tX-OcO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="wCu-QL-yfu"/>
+            </constraints>
+            <point key="canvasLocation" x="6.8702290076335872" y="-17.605633802816904"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Loading indicatior" width="48" height="70"/>
+        <image name="Logo" width="236" height="57"/>
+        <image name="Pro" width="393" height="59"/>
+        <image name="Splash image" width="750" height="1626"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExploreRecipesViewController" customModule="KuvarApp" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="ffA-PL-lIY" id="7a5-e3-wF7"/>
+                <outlet property="pageControl" destination="WwO-Ov-Cix" id="Kp0-xA-ibg"/>
+                <outlet property="view" destination="iN0-l3-epB" id="JY1-GS-F2C"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ffA-PL-lIY">
+                    <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="KVV-DF-3GD">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="iN0-l3-epB" id="Jd0-ry-DFR"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="NPL-rx-UML"/>
+                    </connections>
+                </collectionView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="10" translatesAutoresizingMaskIntoConstraints="NO" id="WwO-Ov-Cix">
+                    <rect key="frame" x="71" y="598" width="251" height="26"/>
+                    <connections>
+                        <action selector="pageControlValueChanged:" destination="-1" eventType="valueChanged" id="odV-c7-c3G"/>
+                    </connections>
+                </pageControl>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="ffA-PL-lIY" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="N7E-rD-FJR"/>
+                <constraint firstItem="ffA-PL-lIY" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ava-6W-wNI"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ffA-PL-lIY" secondAttribute="trailing" id="lAV-4k-y8J"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ffA-PL-lIY" secondAttribute="bottom" id="quk-Pl-cPe"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="WwO-Ov-Cix" secondAttribute="trailing" constant="71" id="sDV-cQ-TQf"/>
+                <constraint firstItem="WwO-Ov-Cix" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="71" id="thU-Kc-cJ2"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="WwO-Ov-Cix" secondAttribute="bottom" constant="194" id="xfk-3w-6cs"/>
+            </constraints>
+            <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
